@@ -181,8 +181,41 @@
     <div class="nav-item" id="nav-pestle"    onclick="setNav('pestle')"><span class="iconify" data-icon="hugeicons:analysis-text-link"></span>PESTLE Detail</div>
   </nav>
 
+  <!-- [G1] Market Entry Progress Tracker -->
+  <div class="px-3 mt-4">
+    <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:10px;padding:12px 14px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+        <span style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.07em;">Market Entry Progress</span>
+        <span style="font-size:13px;font-weight:900;color:var(--primary);">18%</span>
+      </div>
+      <div style="height:5px;background:#c5d0ea;border-radius:99px;overflow:hidden;margin-bottom:10px;">
+        <div style="width:18%;height:100%;background:var(--primary);border-radius:99px;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;" checked> AU Shopify store live
+        </label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;" checked> GOTS cert submitted
+        </label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;"> ABN &amp; GST registered
+        </label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;"> Distributor signed
+        </label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;"> Funding gap closed
+        </label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer;font-size:11px;color:var(--text);">
+          <input type="checkbox" style="accent-color:var(--primary);width:12px;height:12px;"> Breakeven achieved
+        </label>
+      </div>
+    </div>
+  </div>
+
   <!-- Plan Confidence segmented bar -->
-  <div class="px-4 pb-4 mt-5">
+  <div class="px-4 pb-4 mt-4">
     <div class="flex items-center justify-between mb-2">
       <span style="font-size:11px;font-weight:600;color:var(--muted);">Plan Confidence</span>
       <span style="font-size:12px;font-weight:800;color:var(--primary);">78%</span>
@@ -517,6 +550,54 @@
         <div class="page-subhead">Company overview, international readiness, business model &amp; partnership check</div>
       </div>
 
+      <!-- [B1] What's Holding You Back? banner -->
+      <div style="background:#fffbeb;border:1.5px solid #f59e0b;border-radius:12px;padding:15px 20px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <span class="iconify" style="font-size:18px;color:#92400e;" data-icon="hugeicons:alert-diamond"></span>
+          <span style="font-size:13px;font-weight:800;color:#92400e;">What's Holding You Back from Launching Today?</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:white;border:1px solid #fde68a;border-radius:8px;padding:10px 12px;">
+            <div style="font-size:11.5px;font-weight:700;color:#b91c1c;margin-bottom:2px;">Kids Organic safety certification</div>
+            <div style="font-size:11px;color:#374151;">AU product safety cert needed before listing — 2 weeks to resolve</div>
+          </div>
+          <div style="background:white;border:1px solid #fde68a;border-radius:8px;padding:10px 12px;">
+            <div style="font-size:11.5px;font-weight:700;color:#92400e;margin-bottom:2px;">ABN &amp; AU entity registration</div>
+            <div style="font-size:11px;color:#374151;">Required before GST setup and distributor agreement signing</div>
+          </div>
+          <div style="background:white;border:1px solid #fde68a;border-radius:8px;padding:10px 12px;">
+            <div style="font-size:11.5px;font-weight:700;color:#92400e;margin-bottom:2px;">AUD 90K funding gap</div>
+            <div style="font-size:11px;color:#374151;">Gap between required AUD 340K and available AUD 250K internal capacity</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- [B2] Success Probability metric -->
+      <div style="background:var(--primary);border-radius:12px;padding:14px 20px;margin-bottom:16px;display:flex;align-items:center;gap:20px;">
+        <div style="text-align:center;flex-shrink:0;">
+          <div style="font-size:36px;font-weight:900;color:white;line-height:1;">68%</div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,0.55);margin-top:2px;">Success Probability</div>
+        </div>
+        <div style="width:1px;height:48px;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-size:11.5px;font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:6px;">To reach 80%+, resolve these 3 gaps:</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+            <div style="background:rgba(255,255,255,0.12);border-radius:7px;padding:7px 10px;">
+              <div style="font-size:10.5px;font-weight:700;color:white;">Close funding gap</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.6);">+6% success lift</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:7px;padding:7px 10px;">
+              <div style="font-size:10.5px;font-weight:700;color:white;">Complete ACCC audit</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.6);">+4% success lift</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:7px;padding:7px 10px;">
+              <div style="font-size:10.5px;font-weight:700;color:white;">Sign distributor</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.6);">+3% success lift</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Row 1: Company + Readiness -->
       <div class="grid grid-cols-2 gap-4 mb-4">
         <div class="pw-card">
@@ -692,37 +773,60 @@
 
         <div class="pw-card">
           <div class="pw-card-header"><div class="pw-card-title"><span class="iconify" data-icon="hugeicons:handshake-02"></span>Partnership Readiness Check</div></div>
-          <div style="padding:0 16px;">
-            <div class="prc-row">
-              <div class="prc-icon prc-yes"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:tick-02"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">Registered business entity (SG)</div><div style="font-size:11px;color:var(--muted);">Acra-registered Pte Ltd active</div></div>
-              <span class="badge badge-ready">Pass</span>
-            </div>
-            <div class="prc-row">
-              <div class="prc-icon prc-yes"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:tick-02"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">Product certification docs ready</div><div style="font-size:11px;color:var(--muted);">GOTS cert valid to Dec 2026</div></div>
-              <span class="badge badge-ready">Pass</span>
-            </div>
-            <div class="prc-row">
-              <div class="prc-icon prc-yes"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:tick-02"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">Export insurance coverage</div><div style="font-size:11px;color:var(--muted);">Marine cargo + liability covered</div></div>
-              <span class="badge badge-ready">Pass</span>
-            </div>
-            <div class="prc-row">
-              <div class="prc-icon prc-part"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:minus-sign"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">AU distributor agreement draft</div><div style="font-size:11px;color:var(--muted);">2 shortlisted partners in negotiation</div></div>
-              <span class="badge badge-review">In Progress</span>
-            </div>
-            <div class="prc-row">
-              <div class="prc-icon prc-part"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:minus-sign"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">ABN / AU entity registration</div><div style="font-size:11px;color:var(--muted);">Planned for Month 3</div></div>
-              <span class="badge badge-review">Pending</span>
-            </div>
-            <div class="prc-row">
-              <div class="prc-icon prc-no"><span class="iconify" style="font-size:10px;" data-icon="hugeicons:cancel-01"></span></div>
-              <div style="flex:1;"><div style="font-size:12px;font-weight:600;">Modern Slavery Act compliance</div><div style="font-size:11px;color:var(--muted);">Legal review needed before launch</div></div>
-              <span class="badge badge-pending">Action Needed</span>
-            </div>
+          <div style="overflow-x:auto;">
+            <table style="width:100%;font-size:11.5px;border-collapse:collapse;">
+              <thead><tr style="background:#f8fafc;">
+                <th style="padding:6px 12px;text-align:left;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;">Item</th>
+                <th style="padding:6px 12px;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;">Status</th>
+                <th style="padding:6px 12px;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;">Owner</th>
+                <th style="padding:6px 12px;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;">Deadline</th>
+                <th style="padding:6px 12px;text-align:left;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;">Next Step</th>
+              </tr></thead>
+              <tbody>
+                <tr style="border-top:1px solid var(--border);">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;">Registered business entity (SG)</div><div style="font-size:10.5px;color:var(--muted);">Acra-registered Pte Ltd active</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-ready">Pass</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Legal</td>
+                  <td style="padding:7px 12px;color:var(--muted);">Done</td>
+                  <td style="padding:7px 12px;color:#334155;">No action needed</td>
+                </tr>
+                <tr style="border-top:1px solid var(--border);">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;">Product certification docs ready</div><div style="font-size:10.5px;color:var(--muted);">GOTS cert valid to Dec 2026</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-ready">Pass</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Ops</td>
+                  <td style="padding:7px 12px;color:var(--muted);">Done</td>
+                  <td style="padding:7px 12px;color:#334155;">Renew cert by Nov 2026</td>
+                </tr>
+                <tr style="border-top:1px solid var(--border);">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;">Export insurance coverage</div><div style="font-size:10.5px;color:var(--muted);">Marine cargo + liability covered</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-ready">Pass</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Finance</td>
+                  <td style="padding:7px 12px;color:var(--muted);">Done</td>
+                  <td style="padding:7px 12px;color:#334155;">Annual renewal check Q4</td>
+                </tr>
+                <tr style="border-top:1px solid var(--border);background:#fffbeb;">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;">AU distributor agreement draft</div><div style="font-size:10.5px;color:var(--muted);">2 shortlisted partners in negotiation</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-review">In Progress</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Founder</td>
+                  <td style="padding:7px 12px;color:#92400e;font-weight:600;">Month 6</td>
+                  <td style="padding:7px 12px;color:#334155;">Select 1 finalist by Month 5</td>
+                </tr>
+                <tr style="border-top:1px solid var(--border);background:#fffbeb;">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;">ABN / AU entity registration</div><div style="font-size:10.5px;color:var(--muted);">Planned for Month 3</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-review">Pending</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Legal</td>
+                  <td style="padding:7px 12px;color:#92400e;font-weight:600;">Month 3</td>
+                  <td style="padding:7px 12px;color:#334155;">Engage AU accountant this week</td>
+                </tr>
+                <tr style="border-top:1px solid var(--border);background:#fff8f8;">
+                  <td style="padding:7px 12px;"><div style="font-weight:600;color:#b91c1c;">Modern Slavery Act compliance</div><div style="font-size:10.5px;color:var(--muted);">Legal review needed before launch</div></td>
+                  <td style="padding:7px 12px;"><span class="badge badge-pending">Action Needed</span></td>
+                  <td style="padding:7px 12px;color:var(--primary);font-weight:600;">Legal</td>
+                  <td style="padding:7px 12px;color:#b91c1c;font-weight:600;">Pre-launch</td>
+                  <td style="padding:7px 12px;color:#334155;">Brief AU counsel, complete supply chain audit</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -1014,6 +1118,96 @@
         </div>
       </div>
 
+      <!-- [E2] What could go wrong per phase + [E3] Immediate Actions -->
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px;">
+        <!-- What could go wrong -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;"><span class="iconify" data-icon="hugeicons:alert-02" style="vertical-align:middle;margin-right:4px;color:#92400e;"></span>What Could Go Wrong — Per Phase</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+            <div style="padding:10px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Phase 1 (1–6)</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ CAC exceeds AUD 38 target</div>
+              <div style="font-size:10.5px;color:var(--muted);margin-bottom:6px;">→ Pause paid spend; optimise organic first</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ ACCC audit uncovers issues</div>
+              <div style="font-size:10.5px;color:var(--muted);">→ Pre-launch 2-week delay; legal buffer built in</div>
+            </div>
+            <div style="padding:10px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Phase 2 (7–18)</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ Distributor demands &gt;25% margin</div>
+              <div style="font-size:10.5px;color:var(--muted);margin-bottom:6px;">→ Cap at 28%; renegotiate at Year 2 renewal</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ AUD weakens 10%+</div>
+              <div style="font-size:10.5px;color:var(--muted);">→ Forward contracts already in place (Finance)</div>
+            </div>
+            <div style="padding:10px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Phase 3 (19+)</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ Subsidiary costs overrun</div>
+              <div style="font-size:10.5px;color:var(--muted);margin-bottom:6px;">→ Delay Pty Ltd until Phase 2 breakeven confirmed</div>
+              <div style="font-size:11px;color:#374151;margin-bottom:4px;">⚠ Cotton On launches ethical line</div>
+              <div style="font-size:10.5px;color:var(--muted);">→ Deepen certifications; GOTS/B-Corp moat</div>
+            </div>
+          </div>
+        </div>
+        <!-- [E3] Immediate Actions panel -->
+        <div style="background:var(--primary);border-radius:12px;padding:16px 18px;color:white;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.55);margin-bottom:10px;">Next 5 Actions</div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,0.1);border-radius:7px;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.2);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+              <div><div style="font-size:11.5px;font-weight:600;">Finalise ABN + GST</div><div style="font-size:10px;color:rgba(255,255,255,0.55);">Finance · 1 week</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,0.1);border-radius:7px;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.2);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+              <div><div style="font-size:11.5px;font-weight:600;">Sign Melbourne 3PL</div><div style="font-size:10px;color:rgba(255,255,255,0.55);">Ops · 2 weeks</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,0.1);border-radius:7px;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.2);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+              <div><div style="font-size:11.5px;font-weight:600;">Launch 3 test ad campaigns</div><div style="font-size:10px;color:rgba(255,255,255,0.55);">Marketing · 3 weeks</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,0.1);border-radius:7px;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.2);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+              <div><div style="font-size:11.5px;font-weight:600;">Complete ACCC audit</div><div style="font-size:10px;color:rgba(255,255,255,0.55);">Legal · 2 weeks</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:rgba(255,255,255,0.1);border-radius:7px;">
+              <div style="width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.2);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+              <div><div style="font-size:11.5px;font-weight:600;">Shortlist AU distributors (3)</div><div style="font-size:10px;color:rgba(255,255,255,0.55);">Founder · Month 5</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- [E4] Resource Requirements -->
+      <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;"><span class="iconify" data-icon="hugeicons:user-group" style="vertical-align:middle;margin-right:4px;"></span>Resource Requirements</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="padding:10px 14px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;">Phase 1 Team</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.7;">
+              <div>· Founder (AU strategy lead)</div>
+              <div>· Digital marketing manager (SG-based, remote)</div>
+              <div>· AU trade lawyer (contract)</div>
+              <div>· 3PL ops contact (Melbourne)</div>
+            </div>
+          </div>
+          <div style="padding:10px 14px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;">Phase 2 Hires</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.7;">
+              <div>· AU Country Manager (Month 10)</div>
+              <div>· E-commerce coordinator (Month 12)</div>
+              <div>· Wholesale / B2B rep (Month 14)</div>
+            </div>
+          </div>
+          <div style="padding:10px 14px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;">Key Skills Needed</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.7;">
+              <div>· AU compliance &amp; regulatory</div>
+              <div>· Performance marketing (TikTok/Meta AU)</div>
+              <div>· Retail buyer relationships</div>
+              <div>· Supply chain (AU logistics)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Model Rationale + VP Canvas -->
       <div class="grid grid-cols-2 gap-4 mb-4">
         <div class="pw-card">
@@ -1194,6 +1388,40 @@
           </div>
         </div>
       </div>
+
+      <!-- [G3] Key Trade-offs for Entry Strategy -->
+      <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-top:16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:12px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:scale"></span>Key Trade-offs — What You're Giving Up &amp; Gaining</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="border-radius:9px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:var(--primary);padding:8px 12px;font-size:11px;font-weight:800;color:white;">Uppsala Staged Entry</div>
+            <div style="padding:10px 12px;background:#f8fafc;">
+              <div style="font-size:10.5px;font-weight:700;color:#15803d;margin-bottom:4px;">✓ You gain</div>
+              <div style="font-size:11px;color:#334155;margin-bottom:8px;line-height:1.5;">Lower upfront risk · Market learning before commitment · Preserves capital · Reversible if AU underperforms</div>
+              <div style="font-size:10.5px;font-weight:700;color:#b91c1c;margin-bottom:4px;">✗ You give up</div>
+              <div style="font-size:11px;color:#334155;line-height:1.5;">Speed to scale · First-mover advantage vs competitors · Year 1–2 revenue uplift from faster distributor activation</div>
+            </div>
+          </div>
+          <div style="border-radius:9px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:#64748b;padding:8px 12px;font-size:11px;font-weight:800;color:white;">DTC vs Distributor Split</div>
+            <div style="padding:10px 12px;background:#f8fafc;">
+              <div style="font-size:10.5px;font-weight:700;color:#15803d;margin-bottom:4px;">✓ You gain</div>
+              <div style="font-size:11px;color:#334155;margin-bottom:8px;line-height:1.5;">Higher DTC margin (62% vs 37% blended) · Brand control · Customer data ownership · Flexibility to pivot</div>
+              <div style="font-size:10.5px;font-weight:700;color:#b91c1c;margin-bottom:4px;">✗ You give up</div>
+              <div style="font-size:11px;color:#334155;line-height:1.5;">Distributor's existing retail network · Faster physical retail reach · Reduced logistics complexity in Year 2+</div>
+            </div>
+          </div>
+          <div style="border-radius:9px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:#92400e;padding:8px 12px;font-size:11px;font-weight:800;color:white;">Premium vs Mid-Market Price</div>
+            <div style="padding:10px 12px;background:#f8fafc;">
+              <div style="font-size:10.5px;font-weight:700;color:#15803d;margin-bottom:4px;">✓ You gain</div>
+              <div style="font-size:11px;color:#334155;margin-bottom:8px;line-height:1.5;">Higher LTV (AUD 210 vs AUD 140) · Brand defensibility · Lower competitive overlap with Cotton On &amp; H&amp;M</div>
+              <div style="font-size:10.5px;font-weight:700;color:#b91c1c;margin-bottom:4px;">✗ You give up</div>
+              <div style="font-size:11px;color:#334155;line-height:1.5;">Volume ceiling (smaller addressable market) · Slower initial order growth · More sensitive to economic downturns</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END ENTRY STRATEGY -->
 
@@ -1369,6 +1597,30 @@
         </div>
       </div>
 
+      <!-- [F8] Cash Flow Metrics — Burn Rate & Runway -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;">
+        <div style="background:#fff8f8;border:1.5px solid #fca5a5;border-radius:11px;padding:14px 16px;">
+          <div style="font-size:10px;color:#b91c1c;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Monthly Burn Rate</div>
+          <div style="font-size:22px;font-weight:900;color:#b91c1c;">AUD 28K</div>
+          <div style="font-size:10.5px;color:#374151;margin-top:2px;">Phase 1 avg · Peaks at AUD 38K in M7</div>
+        </div>
+        <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:11px;padding:14px 16px;">
+          <div style="font-size:10px;color:#15803d;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Runway (current funds)</div>
+          <div style="font-size:22px;font-weight:900;color:#15803d;">8.9 months</div>
+          <div style="font-size:10.5px;color:#374151;margin-top:2px;">AUD 250K internal capacity ÷ burn</div>
+        </div>
+        <div style="background:white;border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Revenue at Breakeven</div>
+          <div style="font-size:22px;font-weight:900;color:var(--primary);">AUD 220K</div>
+          <div style="font-size:10.5px;color:var(--muted);margin-top:2px;">Required monthly revenue at Month 14</div>
+        </div>
+        <div style="background:white;border:1px solid var(--border);border-radius:11px;padding:14px 16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Net Cash Position Y1</div>
+          <div style="font-size:22px;font-weight:900;color:#b91c1c;">−AUD 180K</div>
+          <div style="font-size:10.5px;color:var(--muted);margin-top:2px;">Before funding gap is closed</div>
+        </div>
+      </div>
+
       <!-- Revenue Ramp + 3yr Projection side by side -->
       <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-bottom:16px;">
 
@@ -1410,6 +1662,11 @@
               <span style="color:var(--muted);">Total Year 1</span>
               <span style="font-weight:800;color:var(--primary);">AUD 1,019K → 1.2M incl. late orders</span>
             </div>
+            <!-- [F5] Breakeven annotation -->
+            <div style="margin-top:8px;background:#fffbeb;border:1px solid #fde68a;border-radius:7px;padding:8px 12px;display:flex;align-items:center;gap:8px;">
+              <span style="font-size:14px;">⭐</span>
+              <div style="font-size:11.5px;color:#92400e;"><strong>Cash flow crosses zero at Month 14</strong> — cumulative revenue first exceeds total invested capital. Revenue at breakeven: AUD 220K/month.</div>
+            </div>
           </div>
         </div>
 
@@ -1425,7 +1682,8 @@
             <div>
               <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;"><span style="font-weight:600;color:var(--text);">Year 2 — Distributor Phase</span><span style="font-weight:800;color:var(--primary);">AUD 2.8M</span></div>
               <div class="score-bar-wrap" style="height:10px;"><div class="score-bar-fill" style="width:52%;height:100%;"></div></div>
-              <div style="font-size:10.5px;color:var(--muted);margin-top:3px;">DTC + wholesale · Breakeven Month 14 · Net +AUD 145K</div>
+              <!-- [F10] Year 2 annotation -->
+              <div style="font-size:10.5px;color:#15803d;margin-top:3px;font-weight:600;">↑ Revenue jump driven by distributor channel activation in M7 · Margin dip M7–10 → wholesale pricing (−7pp on blended margin)</div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;"><span style="font-weight:600;color:var(--text);">Year 3 — Subsidiary Scale</span><span style="font-weight:800;color:var(--primary);">AUD 5.4M</span></div>
@@ -1722,6 +1980,82 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- [R6] Risk Impact on Plan + [R7] All Risks Mitigated callout -->
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-bottom:16px;">
+        <!-- [R6] Risk Impact on Plan -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#b91c1c;margin-bottom:12px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:chain-link-02"></span>If High Risks Remain Unresolved — Impact on Plan</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="padding:9px 12px;background:#fff8f8;border-radius:8px;border:1px solid #fca5a5;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                <span class="badge badge-high">ACCC breach</span>
+                <span style="font-size:11px;color:#374151;font-weight:700;">→ Delay Phase 2 by 2–3 months</span>
+              </div>
+              <div style="font-size:10.5px;color:var(--muted);">Breakeven pushed from Month 14 to Month 16–17 · Revenue loss ≈ AUD 180K</div>
+            </div>
+            <div style="padding:9px 12px;background:#fff8f8;border-radius:8px;border:1px solid #fca5a5;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                <span class="badge badge-high">Currency swing</span>
+                <span style="font-size:11px;color:#374151;font-weight:700;">→ Increase blended CAC by ~18%</span>
+              </div>
+              <div style="font-size:10.5px;color:var(--muted);">CAC rises from AUD 38 → AUD 45 · Reduces Y1 net margin by 8pp</div>
+            </div>
+            <div style="padding:9px 12px;background:#fff8f8;border-radius:8px;border:1px solid #fca5a5;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                <span class="badge badge-high">Price war</span>
+                <span style="font-size:11px;color:#374151;font-weight:700;">→ Lose mid-market, compress margin by 12%</span>
+              </div>
+              <div style="font-size:10.5px;color:var(--muted);">Y2 revenue target reduced 15% · Forces repositioning spend +AUD 40K</div>
+            </div>
+          </div>
+        </div>
+        <!-- [R7] What if all risks mitigated? -->
+        <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:16px 20px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#15803d;margin-bottom:10px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:tick-double-02"></span>If All Risks Mitigated — Upside Scenario</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:white;border-radius:7px;border:1px solid #bbf7d0;">
+              <span style="font-size:11.5px;color:var(--muted);">Breakeven month</span>
+              <span style="font-size:12px;font-weight:700;color:#15803d;">Month 12 <span style="font-weight:400;font-size:10.5px;">(vs 14)</span></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:white;border-radius:7px;border:1px solid #bbf7d0;">
+              <span style="font-size:11.5px;color:var(--muted);">Gross margin</span>
+              <span style="font-size:12px;font-weight:700;color:#15803d;">66% <span style="font-weight:400;font-size:10.5px;">(vs 62%)</span></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:white;border-radius:7px;border:1px solid #bbf7d0;">
+              <span style="font-size:11.5px;color:var(--muted);">3-yr ROI</span>
+              <span style="font-size:12px;font-weight:700;color:#15803d;">340% <span style="font-weight:400;font-size:10.5px;">(vs 285%)</span></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;background:white;border-radius:7px;border:1px solid #bbf7d0;">
+              <span style="font-size:11.5px;color:var(--muted);">Risk score</span>
+              <span style="font-size:12px;font-weight:700;color:#15803d;">3/10 <span style="font-weight:400;font-size:10.5px;">(vs 6/10)</span></span>
+            </div>
+          </div>
+          <div style="font-size:10.5px;color:#15803d;margin-top:10px;font-style:italic;">Proactive mitigation unlocks AUD 800K+ in additional value by Year 3.</div>
+        </div>
+      </div>
+
+      <!-- [R8] Strategic Risks Category -->
+      <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:12px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:strategy"></span>Strategic Risks — Beyond the Operational Register</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="border:1px solid #e0e7ff;border-radius:9px;padding:12px 14px;background:#f5f7ff;">
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:5px;">Brand Positioning Risk</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.55;margin-bottom:8px;">If messaging is too "global brand" before establishing local credibility, AU consumers may perceive EcoThread as an undifferentiated overseas import.</div>
+            <div style="font-size:10.5px;color:var(--muted);font-weight:600;">Mitigation: Lead with Australian story angle, localise all content, AU influencer seeding from Day 1.</div>
+          </div>
+          <div style="border:1px solid #e0e7ff;border-radius:9px;padding:12px 14px;background:#f5f7ff;">
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:5px;">Channel Strategy Risk</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.55;margin-bottom:8px;">Over-reliance on THE ICONIC or a single distributor creates concentration risk — channel could de-list, demand unfavourable terms, or compete directly.</div>
+            <div style="font-size:10.5px;color:var(--muted);font-weight:600;">Mitigation: Maintain DTC as 60%+ of revenue; never let any single channel exceed 35%.</div>
+          </div>
+          <div style="border:1px solid #e0e7ff;border-radius:9px;padding:12px 14px;background:#f5f7ff;">
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:5px;">Product-Market Fit Risk</div>
+            <div style="font-size:11.5px;color:#334155;line-height:1.55;margin-bottom:8px;">SG product range may not translate directly to AU preferences — sizing, style, and seasonal fit assumptions are untested in the AU market.</div>
+            <div style="font-size:10.5px;color:var(--muted);font-weight:600;">Mitigation: Run soft launch with 3 SKUs first, collect NPS + return rate data before full catalogue push.</div>
           </div>
         </div>
       </div>
@@ -2169,6 +2503,71 @@
           </table>
         </div>
       </div>
+      <!-- [Rd4] Dependencies + [Rd5] Decision Gates -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+        <!-- [Rd4] Dependencies -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:12px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:hierarchy-circle-01"></span>Critical Dependencies</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="padding:8px 12px;background:#f8fafc;border-radius:8px;border-left:3px solid var(--primary);">
+              <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:2px;">ABN registration → unlocks GST setup, distributor agreement &amp; THE ICONIC listing</div>
+              <div style="font-size:10.5px;color:var(--muted);">Blocker for 3 workstreams · Must complete by Month 3</div>
+            </div>
+            <div style="padding:8px 12px;background:#f8fafc;border-radius:8px;border-left:3px solid var(--primary);">
+              <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:2px;">Distributor agreement signed → enables B2B wholesale channel &amp; Phase 2 revenue jump</div>
+              <div style="font-size:10.5px;color:var(--muted);">Prerequisite for Year 2 AUD 2.8M target · Target: Month 7</div>
+            </div>
+            <div style="padding:8px 12px;background:#f8fafc;border-radius:8px;border-left:3px solid var(--primary);">
+              <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:2px;">Kids safety cert complete → allows full product catalogue launch</div>
+              <div style="font-size:10.5px;color:var(--muted);">Currently blocking 25% of SKUs · Ops to resolve within 2 weeks</div>
+            </div>
+            <div style="padding:8px 12px;background:#f8fafc;border-radius:8px;border-left:3px solid var(--primary);">
+              <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:2px;">Funding gap closed → enables Phase 2 distributor investment &amp; AU hire</div>
+              <div style="font-size:10.5px;color:var(--muted);">AUD 90K gap limits Phase 2 speed · Resolve via angel round or revenue financing</div>
+            </div>
+          </div>
+        </div>
+        <!-- [Rd5] Decision Gates -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:12px;"><span class="iconify" style="vertical-align:middle;margin-right:4px;" data-icon="hugeicons:decision"></span>Decision Gates — Go/No-Go Checkpoints</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <!-- Month 6 Gate -->
+            <div style="border:1.5px solid #c5d0ea;border-radius:10px;overflow:hidden;">
+              <div style="background:var(--primary);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;">
+                <span style="font-size:12px;font-weight:800;color:white;">Month 6 Gate — Continue to Phase 2?</span>
+                <span style="font-size:10px;font-weight:700;background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:99px;color:rgba(255,255,255,0.8);">Upcoming</span>
+              </div>
+              <div style="padding:10px 14px;background:#f8fafc;">
+                <div style="font-size:10.5px;font-weight:700;color:var(--muted);margin-bottom:5px;">PASS if ALL are true:</div>
+                <div style="font-size:11.5px;color:#334155;display:flex;flex-direction:column;gap:3px;">
+                  <div>✓ Monthly revenue ≥ AUD 65K</div>
+                  <div>✓ ABN registered, GST active</div>
+                  <div>✓ NPS score ≥ 40</div>
+                  <div>✓ CAC ≤ AUD 55</div>
+                </div>
+                <div style="font-size:10.5px;color:#b91c1c;margin-top:6px;font-weight:600;">FAIL → Extend Phase 1 by 3 months, reduce marketing spend 30%</div>
+              </div>
+            </div>
+            <!-- Month 18 Gate -->
+            <div style="border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden;">
+              <div style="background:#64748b;padding:8px 14px;display:flex;align-items:center;justify-content:space-between;">
+                <span style="font-size:12px;font-weight:800;color:white;">Month 18 Gate — Proceed to Subsidiary?</span>
+                <span style="font-size:10px;font-weight:700;background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:99px;color:rgba(255,255,255,0.8);">Future</span>
+              </div>
+              <div style="padding:10px 14px;background:#f8fafc;">
+                <div style="font-size:10.5px;font-weight:700;color:var(--muted);margin-bottom:5px;">PASS if ALL are true:</div>
+                <div style="font-size:11.5px;color:#334155;display:flex;flex-direction:column;gap:3px;">
+                  <div>✓ Breakeven achieved (Month 14)</div>
+                  <div>✓ Monthly revenue ≥ AUD 220K</div>
+                  <div>✓ Distributor channel ≥ 2 partners</div>
+                  <div>✓ NPS score ≥ 52</div>
+                </div>
+                <div style="font-size:10.5px;color:#b91c1c;margin-top:6px;font-weight:600;">FAIL → Stay in Phase 2, defer subsidiary registration by 6 months</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END EXECUTION ROADMAP -->
 
@@ -2182,17 +2581,131 @@
         <div class="page-subhead">Side-by-side evaluation of all four entry models + scenario planning matrix</div>
       </div>
 
-      <!-- Recommendation Banner -->
-      <div style="background:var(--primary);border-radius:14px;padding:18px 24px;margin-bottom:20px;display:flex;align-items:center;gap:16px;">
-        <span class="iconify" style="font-size:28px;color:rgba(255,255,255,0.7);flex-shrink:0;" data-icon="hugeicons:idea-01"></span>
-        <div>
-          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:4px;">Recommended: Uppsala Model for EcoThread Co.</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">Given EcoThread's size (85 staff, SGD 4.2M revenue), Uppsala's incremental approach matches their financial runway and risk tolerance. Born Global offers faster scale but demands upfront investment and AU brand recognition EcoThread hasn't yet built. OLI/Eclectic suits MNCs with large FDI appetite. Transaction Cost theory favours asset-light models with limited control — not ideal for a brand-driven business.</div>
+      <!-- [C1] Dynamic Recommendation Banner -->
+      <div style="background:var(--primary);border-radius:14px;padding:18px 24px;margin-bottom:16px;">
+        <div style="display:flex;align-items:start;gap:16px;">
+          <span class="iconify" style="font-size:28px;color:rgba(255,255,255,0.7);flex-shrink:0;margin-top:2px;" data-icon="hugeicons:idea-01"></span>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+              <div style="font-size:13px;font-weight:800;color:#fff;">Recommended Model: Uppsala — Staged Entry</div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:99px;padding:3px 10px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.85);">Confidence: 78%</div>
+            </div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.75);margin-bottom:10px;line-height:1.6;"><strong style="color:white;">Why:</strong> Best balance of risk vs investment for current financial capacity (AUD 250K available). Aligns with EcoThread's stage — incremental market learning reduces risk.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:9px 12px;">
+                <div style="font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,0.5);margin-bottom:5px;">If speed priority increases:</div>
+                <div style="font-size:11.5px;color:white;">→ Born Global — faster growth, high burn &amp; risk</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:9px 12px;">
+                <div style="font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,0.5);margin-bottom:5px;">If investment doubles:</div>
+                <div style="font-size:11.5px;color:white;">→ OLI / Eclectic — higher control, full FDI entry</div>
+              </div>
+            </div>
+          </div>
+          <div style="flex-shrink:0;text-align:center;padding:12px 18px;background:rgba(255,255,255,0.13);border-radius:10px;border:1px solid rgba(255,255,255,0.2);">
+            <div style="font-size:22px;font-weight:900;color:#fff;">Uppsala</div>
+            <div style="font-size:10.5px;color:rgba(255,255,255,0.6);margin-top:2px;">Selected Model</div>
+          </div>
         </div>
-        <div style="flex-shrink:0;text-align:center;padding:12px 18px;background:rgba(255,255,255,0.13);border-radius:10px;border:1px solid rgba(255,255,255,0.2);">
-          <div style="font-size:22px;font-weight:900;color:#fff;">Uppsala</div>
-          <div style="font-size:10.5px;color:rgba(255,255,255,0.6);margin-top:2px;">Selected Model</div>
+      </div>
+
+      <!-- [C2] Trade-off Summary + [C3] Decision Checkpoint -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <!-- Trade-off Summary -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">Key Trade-offs</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="padding:9px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:11.5px;font-weight:700;color:var(--primary);margin-bottom:3px;">Uppsala (Recommended)</div>
+              <div style="display:flex;gap:12px;font-size:11px;">
+                <span style="color:#15803d;">✓ Low risk · Low upfront</span>
+                <span style="color:#92400e;">– Slower market penetration</span>
+              </div>
+            </div>
+            <div style="padding:9px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:11.5px;font-weight:700;color:#475569;margin-bottom:3px;">Born Global</div>
+              <div style="display:flex;gap:12px;font-size:11px;">
+                <span style="color:#15803d;">✓ Fast growth</span>
+                <span style="color:#b91c1c;">– High burn + execution risk</span>
+              </div>
+            </div>
+            <div style="padding:9px 12px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:11.5px;font-weight:700;color:#475569;margin-bottom:3px;">OLI / Eclectic</div>
+              <div style="display:flex;gap:12px;font-size:11px;">
+                <span style="color:#15803d;">✓ Full control · High ROI ceiling</span>
+                <span style="color:#b91c1c;">– Requires AUD 500K+ capital</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:10px;padding:9px 12px;background:var(--primary-light);border-radius:8px;font-size:11.5px;color:var(--primary);font-style:italic;">
+            "Despite higher ROI potential, Born Global is not recommended due to execution risk and current capital constraints."
+          </div>
         </div>
+        <!-- Decision Checkpoint -->
+        <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px;">Decision Checkpoints</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="padding:10px 12px;border:1.5px solid var(--primary);border-radius:8px;background:var(--primary-light);">
+              <div style="font-size:11.5px;font-weight:800;color:var(--primary);margin-bottom:5px;">Month 6 Gate — Proceed to Phase 2?</div>
+              <div style="font-size:11px;color:#334155;line-height:1.6;">
+                <div>If: Revenue &gt; AUD 80K/month</div>
+                <div>If: CAC &lt; AUD 45</div>
+                <div style="color:#15803d;font-weight:600;margin-top:3px;">→ Proceed to distributor phase</div>
+                <div style="color:#b91c1c;font-weight:600;">→ Else: Extend Phase 1 by 3 months</div>
+              </div>
+            </div>
+            <div style="padding:10px 12px;border:1px solid var(--border);border-radius:8px;">
+              <div style="font-size:11.5px;font-weight:800;color:var(--text);margin-bottom:5px;">Month 18 Gate — Proceed to Phase 3?</div>
+              <div style="font-size:11px;color:#334155;line-height:1.6;">
+                <div>If: Revenue &gt; AUD 220K/month</div>
+                <div>If: Distributor agreements &gt;2</div>
+                <div style="color:#15803d;font-weight:600;margin-top:3px;">→ Register AU Pty Ltd entity</div>
+                <div style="color:#b91c1c;font-weight:600;">→ Else: Reconsider model (switch to JV?)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- [C4] Scenario Comparison Financial Table -->
+      <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,.06);">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;">Financial Scenario Comparison</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+          <thead><tr style="background:#f8fafc;">
+            <th style="padding:9px 14px;text-align:left;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Scenario</th>
+            <th style="padding:9px 14px;text-align:center;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Yr1 Revenue</th>
+            <th style="padding:9px 14px;text-align:center;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Breakeven</th>
+            <th style="padding:9px 14px;text-align:center;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">ROI Yr3</th>
+            <th style="padding:9px 14px;text-align:center;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Risk</th>
+            <th style="padding:9px 14px;text-align:left;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;">Driven by</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-top:1px solid var(--border);background:var(--primary-light);">
+              <td style="padding:9px 14px;font-weight:800;color:var(--primary);">Uppsala (current) ✓</td>
+              <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--primary);">AUD 1.2M</td>
+              <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--primary);">Month 14</td>
+              <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--primary);">285%</td>
+              <td style="padding:9px 14px;text-align:center;"><span class="badge badge-low">Low</span></td>
+              <td style="padding:9px 14px;font-size:11px;color:#334155;">DTC margins + staged distributor activation</td>
+            </tr>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:9px 14px;font-weight:700;color:#334155;">JV-led entry</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">AUD 1.6M</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">Month 18</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">240%</td>
+              <td style="padding:9px 14px;text-align:center;"><span class="badge badge-med">Med</span></td>
+              <td style="padding:9px 14px;font-size:11px;color:#334155;">Partner network; slower brand control</td>
+            </tr>
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:9px 14px;font-weight:700;color:#334155;">DTC only</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">AUD 900K</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">Month 10</td>
+              <td style="padding:9px 14px;text-align:center;color:#334155;">190%</td>
+              <td style="padding:9px 14px;text-align:center;"><span class="badge badge-low">Low</span></td>
+              <td style="padding:9px 14px;font-size:11px;color:#334155;">Pure digital; limited scale ceiling</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- Side-by-side comparison table -->
@@ -2467,66 +2980,154 @@
         <div><div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">LANGUAGES</div><div style="font-size:16px;font-weight:800;color:var(--text);margin-top:4px;">English</div></div>
       </div>
 
-      <!-- PESTLE At a Glance 3x2 grid -->
+      <!-- PESTLE At a Glance 3x2 grid — [P3] Risk/Opportunity scores added -->
       <div style="margin-bottom:28px;">
-        <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px;">PESTLE AT A GLANCE</div>
+        <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px;">PESTLE AT A GLANCE — Opportunity &amp; Risk Weighting</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <!-- P -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#11205D;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">P — POLITICAL</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#dcfce7;color:#15803d;">POSITIVE</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Low political risk — execution risk sits at regulatory compliance level</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Low political risk — execution risk sits at regulatory compliance level</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:70%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">7/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:20%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">2/10</span>
+              </div>
+            </div>
           </div>
+          <!-- E -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#064e3b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">E — ECONOMIC</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#fef3c7;color:#92400e;">MIXED</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Strong demand fundamentals — AUD/SGD currency risk needs active hedging</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Strong demand fundamentals — AUD/SGD currency risk needs active hedging</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:75%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">7.5/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:60%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">6/10</span>
+              </div>
+            </div>
           </div>
+          <!-- S -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#7c2d12;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">S — SOCIAL</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#dcfce7;color:#15803d;">POSITIVE</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Strong ethical fashion alignment — Gen-Z sustainability values drive demand</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Strong ethical fashion alignment — Gen-Z sustainability values drive demand</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:85%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">8.5/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:20%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">2/10</span>
+              </div>
+            </div>
           </div>
+          <!-- T -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#1e3a5f;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">T — TECHNOLOGICAL</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#f1f5f9;color:#475569;">NEUTRAL</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Excellent e-commerce infrastructure — AfterPay &amp; Shopify AU ecosystem mature</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Excellent e-commerce infrastructure — AfterPay &amp; Shopify AU ecosystem mature</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:80%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">8/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:15%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">1.5/10</span>
+              </div>
+            </div>
           </div>
+          <!-- L -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#78350f;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">L — LEGAL</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#fef3c7;color:#92400e;">MIXED</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Legal risk manageable — ACL compliance and greenwashing exposure require attention</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Legal risk manageable — ACL compliance and greenwashing exposure require attention</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:50%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">5/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:70%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">7/10</span>
+              </div>
+            </div>
           </div>
+          <!-- En -->
           <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(17,32,93,0.05);">
             <div style="background:#14532d;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
               <div style="font-size:12px;font-weight:800;color:white;">En — ENVIRONMENTAL</div>
               <div style="padding:2px 9px;border-radius:99px;font-size:10px;font-weight:800;background:#fef3c7;color:#92400e;">MIXED</div>
             </div>
-            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;">Sustainability as demand driver — packaging regulations growing at state level</div>
+            <div style="padding:10px 14px;font-size:12px;color:#334155;line-height:1.55;border-bottom:1px solid var(--border);">Sustainability as demand driver — packaging regulations growing at state level</div>
+            <div style="padding:8px 14px;display:flex;gap:12px;background:#f8fafc;">
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#15803d;font-weight:700;">OPP</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:75%;height:100%;background:#15803d;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#15803d;">7.5/10</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px;flex:1;">
+                <span style="font-size:10px;color:#b91c1c;font-weight:700;">RISK</span>
+                <div style="flex:1;height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden;"><div style="width:40%;height:100%;background:#b91c1c;border-radius:99px;"></div></div>
+                <span style="font-size:10px;font-weight:800;color:#b91c1c;">4/10</span>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Expand All / Collapse All control for PESTLE detail -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">DETAILED PESTLE ANALYSIS — click header to expand</div>
+        <div style="display:flex;gap:8px;">
+          <button onclick="document.querySelectorAll('.pestle-detail').forEach(d=>d.style.display='block')" style="font-size:11px;font-weight:700;color:var(--primary);background:var(--primary-light);border:1px solid #c5d0ea;border-radius:99px;padding:3px 12px;cursor:pointer;">Expand All</button>
+          <button onclick="document.querySelectorAll('.pestle-detail').forEach(d=>d.style.display='none')" style="font-size:11px;font-weight:700;color:var(--muted);background:#f8fafc;border:1px solid var(--border);border-radius:99px;padding:3px 12px;cursor:pointer;">Collapse All</button>
         </div>
       </div>
 
       <!-- ── P POLITICAL ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#11205D;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#11205D;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;">P</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">POLITICAL</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Low political risk — execution risk sits at regulatory compliance level</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#dcfce7;color:#15803d;flex-shrink:0;">POSITIVE</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #11205D;padding:14px 16px;">
@@ -2562,20 +3163,32 @@
               </div>
             </div>
           </div>
+          <!-- [P4] What would change this? + [P6] So what? -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If ACCC escalates enforcement further or greenwashing fines increase significantly — this dimension moves from Positive → Mixed. Monitor quarterly.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">Political environment is a tailwind. No material entry barriers from government. Priority: stay ahead of ACCC enforcement by proactively auditing all marketing claims before launch.</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ── E ECONOMIC ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#064e3b;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#064e3b;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;">E</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">ECONOMIC</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Solid demand fundamentals — AUD/SGD currency risk requires active management</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#fef3c7;color:#92400e;flex-shrink:0;">MIXED</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #064e3b;padding:14px 16px;">
@@ -2611,20 +3224,31 @@
               </div>
             </div>
           </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If RBA cuts rates substantially and AU dollar weakens vs SGD, this becomes more positive — margins improve. Alternatively, deep recession would reduce the premium opportunity.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">Strong market with real premium headroom. The single biggest economic action item: implement dynamic AUD pricing and FX hedging from Month 1 to protect margin.</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ── S SOCIAL ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#7c2d12;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#7c2d12;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;">S</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">SOCIAL</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Strong ethical fashion alignment — Gen-Z sustainability values drive premium demand</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#dcfce7;color:#15803d;flex-shrink:0;">POSITIVE</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #7c2d12;padding:14px 16px;">
@@ -2660,20 +3284,31 @@
               </div>
             </div>
           </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If Buy Local sentiment hardens significantly, an international brand could face resistance. Counter: localise messaging, hire AU-native team visibly, and commit to AU charitable giving.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">Social tailwinds are the strongest factor in this analysis. AU demand for ethical fashion is structurally growing. Lead with certification story and lifestyle imagery — don't lead with price.</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ── T TECHNOLOGICAL ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#1e3a5f;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#1e3a5f;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;">T</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">TECHNOLOGICAL</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Excellent e-commerce infrastructure — AfterPay and Shopify AU ecosystem are mature</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#f1f5f9;color:#475569;flex-shrink:0;">NEUTRAL</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #1e3a5f;padding:14px 16px;">
@@ -2709,20 +3344,31 @@
               </div>
             </div>
           </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If TikTok is banned or restricted in AU (as has been debated), social commerce strategy needs to pivot to Instagram/YouTube. Maintain multi-platform presence as insurance.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">Technology is a tailwind. Integrate AfterPay and TikTok Shop from Day 1. Mobile-first Shopify store is not optional — it's the entry ticket. Invest in this before launch.</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ── L LEGAL ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#78350f;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#78350f;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;">L</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">LEGAL</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Legal risk manageable — ACL compliance and greenwashing exposure require proactive attention</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#fef3c7;color:#92400e;flex-shrink:0;">MIXED</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #78350f;padding:14px 16px;">
@@ -2758,20 +3404,31 @@
               </div>
             </div>
           </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If ACCC significantly increases greenwashing fines or introduces sector-specific fashion regulations, legal risk could jump to HIGH. Keep a quarterly legal review cadence.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">GOTS certification is EcoThread's best legal shield. Lean into it proactively — publish the full cert on the website, reference it in every marketing claim. Don't wait to be audited.</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ── En ENVIRONMENTAL ── -->
       <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 3px rgba(17,32,93,0.06);">
-        <div style="background:#14532d;padding:18px 22px;display:flex;align-items:center;gap:14px;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'" style="background:#14532d;padding:18px 22px;display:flex;align-items:center;gap:14px;cursor:pointer;">
           <div style="width:38px;height:38px;background:rgba(0,0,0,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:white;flex-shrink:0;">En</div>
           <div style="flex:1;">
             <div style="font-size:15px;font-weight:800;color:white;letter-spacing:.02em;">ENVIRONMENTAL</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;font-style:italic;">Sustainability is a demand driver — packaging regulations growing at state level</div>
           </div>
           <div style="padding:4px 13px;border-radius:99px;font-size:11px;font-weight:800;background:#fef3c7;color:#92400e;flex-shrink:0;">MIXED</div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.5);margin-left:4px;">▼</span>
         </div>
-        <div style="padding:20px 22px;background:white;">
+        <div class="pestle-detail" style="display:none;padding:20px 22px;background:white;">
           <div style="font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">KEY FACTORS</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
             <div style="background:#f8fafc;border-radius:8px;border:1px solid var(--border);border-left:3px solid #14532d;padding:14px 16px;">
@@ -2805,6 +3462,16 @@
                 <div style="display:flex;align-items:flex-start;gap:9px;font-size:12.5px;color:#334155;"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">→</span>Partner with carbon-neutral AU logistics provider from Day 1</div>
                 <div style="display:flex;align-items:flex-start;gap:9px;font-size:12.5px;color:#334155;"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">→</span>Source compostable packaging compliant with all AU state laws before launch</div>
               </div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;border-top:1px solid var(--border);padding-top:14px;">
+            <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#92400e;margin-bottom:6px;">What would change this assessment?</div>
+              <div style="font-size:11.5px;color:#374151;line-height:1.6;">If AU federal government introduces a mandatory carbon border tax on imported textiles, cost structure would need to be revisited. Probability: low in the next 2 years.</div>
+            </div>
+            <div style="background:var(--primary-light);border:1px solid #c5d0ea;border-radius:8px;padding:12px 14px;">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:6px;">So what for EcoThread?</div>
+              <div style="font-size:11.5px;color:#334155;line-height:1.6;">Environmental factors are a net positive. EcoThread's dual certification and carbon-neutral logistics are a genuine competitive advantage — market them aggressively to environmentally-conscious AU consumers.</div>
             </div>
           </div>
         </div>
