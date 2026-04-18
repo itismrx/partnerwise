@@ -140,10 +140,453 @@
 
   /* Topbar */
   .topbar { background:#fff;box-shadow:0 1px 0 var(--border), 0 2px 8px rgba(17,32,93,0.04);padding:11px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0; }
+
+  /* ── Onboarding Overlay ── */
+  #onboarding-overlay { position:fixed;inset:0;z-index:9999;background:var(--bg); }
+  .ob-step { display:none;width:100%;height:100%; }
+  .ob-step.active { display:flex; }
+
+  /* Login split */
+  .login-left { flex:0 0 480px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 56px; }
+  .login-right { flex:1;background:#0a0a0a;position:relative;overflow:hidden; }
+  .login-right canvas { position:absolute;inset:0;width:100%;height:100%; }
+  .login-right-text { position:absolute;bottom:48px;left:48px;right:48px;color:#fff; }
+  .login-right-text h2 { font-size:26px;font-weight:800;line-height:1.25;margin-bottom:8px; }
+  .login-right-text p { font-size:13px;opacity:.6;line-height:1.6; }
+  .login-logo-mark { width:52px;height:52px;margin-bottom:28px; }
+  .ob-input { width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:13.5px;font-family:'Figtree',sans-serif;color:var(--text);outline:none;transition:border-color .15s; }
+  .ob-input:focus { border-color:var(--primary); }
+  .input-wrap { position:relative;width:100%; }
+  .input-wrap .eye-btn { position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);padding:0; }
+  .ob-divider { display:flex;align-items:center;gap:12px;width:100%;margin:16px 0; }
+  .ob-divider span { flex:1;height:1px;background:var(--border); }
+  .ob-divider p { font-size:12px;color:var(--muted);white-space:nowrap; }
+  .btn-ob-primary { width:100%;padding:13px;background:var(--primary);color:#fff;border:none;border-radius:99px;font-size:14px;font-weight:700;font-family:'Figtree',sans-serif;cursor:pointer;transition:background .15s; }
+  .btn-ob-primary:hover { background:var(--primary-mid); }
+  .btn-ob-primary:disabled { opacity:.55;cursor:not-allowed; }
+  .btn-ob-outline { padding:12px 32px;background:#fff;color:var(--primary);border:1.5px solid var(--primary);border-radius:99px;font-size:13.5px;font-weight:700;font-family:'Figtree',sans-serif;cursor:pointer;transition:all .15s; }
+  .btn-ob-outline:hover { background:var(--primary-light); }
+  .btn-google { width:100%;padding:12px;background:#fff;border:1.5px solid var(--border);border-radius:99px;font-size:13.5px;font-weight:600;font-family:'Figtree',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .15s; }
+  .btn-google:hover { background:#f8fafc; }
+
+  /* Onboarding navbar */
+  .ob-nav { height:60px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 32px;flex-shrink:0; }
+  .ob-nav-logo { display:flex;align-items:center;gap:10px; }
+  .ob-nav-logo .mark { width:34px;height:34px;border-radius:8px;background:var(--primary);display:flex;align-items:center;justify-content:center; }
+  .ob-nav-logo .brand { font-size:15px;font-weight:800;color:var(--primary); }
+  .ob-nav-actions { display:flex;align-items:center;gap:14px; }
+  .ob-nav-icon { width:36px;height:36px;border-radius:8px;border:1.5px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer; }
+  .ob-nav-avatar { width:36px;height:36px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;cursor:pointer; }
+
+  /* Profile form */
+  .ob-body { flex:1;overflow-y:auto;padding:40px 32px; }
+  .ob-form-grid { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
+  .ob-field label { display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px; }
+  .ob-select { width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:13.5px;font-family:'Figtree',sans-serif;color:var(--text);outline:none;background:#fff;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%2364748b' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer; }
+  .ob-select:focus { border-color:var(--primary); }
+  .ob-textarea { width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:13.5px;font-family:'Figtree',sans-serif;color:var(--text);outline:none;resize:vertical;min-height:88px; }
+  .ob-textarea:focus { border-color:var(--primary); }
+  .ob-btn-row { display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:24px 32px;border-top:1px solid var(--border);flex-shrink:0; }
+
+  /* Goal items */
+  .goal-list { display:flex;flex-direction:column;gap:12px;max-width:680px;margin:0 auto; }
+  .goal-item { display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border:2px solid var(--border);border-radius:14px;cursor:pointer;transition:all .15s; }
+  .goal-item:hover { border-color:#c7d2e8;background:#fafbff; }
+  .goal-item.selected { border-color:var(--primary);background:var(--primary-light); }
+  .goal-icon { width:44px;height:44px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+  .goal-item.selected .goal-icon { background:var(--primary); }
+  .goal-icon .iconify { font-size:20px;color:var(--primary); }
+  .goal-item.selected .goal-icon .iconify { color:#fff; }
+  .goal-text { flex:1; }
+  .goal-text strong { font-size:14px;font-weight:700;color:var(--text);display:block; }
+  .goal-text span { font-size:12.5px;color:var(--muted);margin-top:2px;display:block; }
+  .goal-check { width:22px;height:22px;border-radius:50%;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s; }
+  .goal-item.selected .goal-check { border-color:var(--primary);background:var(--primary); }
+
+  /* Mode table */
+  .mode-table { width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid var(--border); }
+  .mode-table th { padding:11px 14px;font-size:11px;font-weight:700;color:var(--muted);text-align:left;background:#f8fafc;border-bottom:1.5px solid var(--border);white-space:nowrap; }
+  .mode-table td { padding:14px;font-size:13px;color:var(--text);border-bottom:1px solid var(--border);vertical-align:middle; }
+  .mode-table tr:last-child td { border-bottom:none; }
+  .mode-table tr.mode-selected td { background:var(--primary-light); }
+  .mode-table tr:hover td { background:#f8faff;cursor:pointer; }
+  .mode-table tr.mode-selected:hover td { background:var(--primary-light); }
+  .mode-radio { width:18px;height:18px;accent-color:var(--primary);cursor:pointer; }
+  .badge-recommended { display:inline-block;padding:2px 8px;background:#dcfce7;color:#15803d;border-radius:99px;font-size:10.5px;font-weight:700;margin-left:8px; }
+
+  /* Generating */
+  .generating-chip { display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#fff;border:1.5px solid var(--border);border-radius:99px;font-size:13px;font-weight:600;color:var(--text); }
+  .spin-dots { display:inline-flex;gap:4px;align-items:center; }
+  .spin-dots span { width:6px;height:6px;border-radius:50%;background:var(--primary);animation:dotpulse 1.2s infinite ease-in-out; }
+  .spin-dots span:nth-child(2) { animation-delay:.2s; }
+  .spin-dots span:nth-child(3) { animation-delay:.4s; }
+  @keyframes dotpulse { 0%,80%,100%{opacity:.25} 40%{opacity:1} }
 </style>
 </head>
-<body class="flex" style="height:100vh;overflow:hidden;">
+<body style="height:100vh;overflow:hidden;font-family:'Figtree',sans-serif;">
 
+<!-- ════════════════ ONBOARDING OVERLAY ════════════════ -->
+<div id="onboarding-overlay">
+
+  <!-- STEP 1: LOGIN -->
+  <div id="step-login" class="ob-step active">
+    <!-- Left panel -->
+    <div class="login-left">
+      <!-- Logo mark -->
+      <svg class="login-logo-mark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="52" height="52" rx="13" fill="#11205D"/>
+        <polygon points="26,10 42,40 10,40" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="26" cy="10" r="3" fill="#f59e0b"/>
+        <circle cx="42" cy="40" r="3" fill="#f59e0b"/>
+        <circle cx="10" cy="40" r="3" fill="#f59e0b"/>
+      </svg>
+      <h1 style="font-size:24px;font-weight:800;color:var(--text);margin-bottom:6px;text-align:center;">Login to your account</h1>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:28px;text-align:center;">Welcome back — let's grow with data-led insights</p>
+
+      <div style="width:100%;margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;">Email address</label>
+        <input class="ob-input" type="email" placeholder="you@company.com" value="nebil@ultraproventures.com" />
+      </div>
+      <div style="width:100%;margin-bottom:8px;">
+        <label style="display:block;font-size:12px;font-weight:700;margin-bottom:6px;">Password</label>
+        <div class="input-wrap">
+          <input class="ob-input" id="pw-input" type="password" placeholder="••••••••••" value="password123" />
+          <button class="eye-btn" onclick="togglePw()" tabindex="-1">
+            <span class="iconify" data-icon="hugeicons:view" style="font-size:17px;"></span>
+          </button>
+        </div>
+      </div>
+      <div style="width:100%;text-align:right;margin-bottom:20px;">
+        <a href="#" style="font-size:12.5px;color:var(--primary);font-weight:600;">Forgot Password?</a>
+      </div>
+      <button class="btn-ob-primary" onclick="goToStep('profile')">Sign in with email</button>
+
+      <div class="ob-divider">
+        <span></span><p>OR CONTINUE WITH</p><span></span>
+      </div>
+
+      <button class="btn-google">
+        <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 01-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"/><path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"/></svg>
+        Continue with Google
+      </button>
+
+      <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.6;">By signing in you agree to our <a href="#" style="color:var(--primary);">Terms of Service</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a></p>
+    </div>
+    <!-- Right panel: dark canvas -->
+    <div class="login-right">
+      <canvas id="sphere-canvas"></canvas>
+      <div class="login-right-text">
+        <h2>Grow with Data-Led<br>Insights</h2>
+        <p>Identify your best-fit markets, validate entry strategies,<br>and build an execution roadmap — all in one place.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: COMPANY PROFILE -->
+  <div id="step-profile" class="ob-step" style="flex-direction:column;">
+    <nav class="ob-nav">
+      <div class="ob-nav-logo">
+        <div class="mark"><span class="iconify text-white" style="font-size:16px;" data-icon="hugeicons:compass"></span></div>
+        <span class="brand">Internationalization</span>
+      </div>
+      <div class="ob-nav-actions">
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:notification-02" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:menu-01" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-avatar">N</div>
+      </div>
+    </nav>
+    <div class="ob-body">
+      <div style="max-width:780px;margin:0 auto;">
+        <h2 style="font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;">Company Profile</h2>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:32px;">Tell us about your business so we can tailor the market entry plan to your context.</p>
+        <div class="ob-form-grid">
+          <div class="ob-field">
+            <label>Company Name</label>
+            <input class="ob-input" type="text" placeholder="e.g. EcoThread Apparel" value="EcoThread Apparel" />
+          </div>
+          <div class="ob-field">
+            <label>Website</label>
+            <input class="ob-input" type="url" placeholder="https://yourcompany.com" value="https://ecothread.com.au" />
+          </div>
+          <div class="ob-field">
+            <label>Country of Origin</label>
+            <select class="ob-select">
+              <option>Australia</option><option>United States</option><option>United Kingdom</option><option>Singapore</option><option>Canada</option>
+            </select>
+          </div>
+          <div class="ob-field">
+            <label>Sector / Industry</label>
+            <select class="ob-select">
+              <option>Textiles &amp; Apparel</option><option>Technology</option><option>Consumer Goods</option><option>Healthcare</option><option>Food &amp; Beverage</option><option>Financial Services</option>
+            </select>
+          </div>
+          <div class="ob-field">
+            <label>Target Market</label>
+            <select class="ob-select">
+              <option>Australia</option><option>United States</option><option>United Kingdom</option><option>Japan</option><option>Germany</option><option>Southeast Asia</option>
+            </select>
+          </div>
+          <div class="ob-field">
+            <label>Annual Budget (USD)</label>
+            <input class="ob-input" type="text" placeholder="e.g. 500,000" value="420,000" />
+          </div>
+          <div class="ob-field">
+            <label>Risk Appetite</label>
+            <select class="ob-select">
+              <option>Low — Prefer steady, proven paths</option>
+              <option selected>Medium — Balanced growth &amp; caution</option>
+              <option>High — Bold, move fast</option>
+            </select>
+          </div>
+          <div class="ob-field">
+            <label>Target Customers</label>
+            <input class="ob-input" type="text" placeholder="e.g. Eco-conscious millennials, B2B retailers" value="Eco-conscious millennials, B2B retailers" />
+          </div>
+          <div class="ob-field" style="grid-column:1/-1;">
+            <label>Collaboration Areas</label>
+            <textarea class="ob-textarea" placeholder="e.g. Distribution partnerships, co-marketing, licensing…">Distribution partnerships, co-marketing with local eco brands, retail licensing</textarea>
+          </div>
+          <div class="ob-field" style="grid-column:1/-1;">
+            <label>Company Bio</label>
+            <textarea class="ob-textarea" placeholder="Brief description of your company, mission, and key products…">EcoThread is an Australian sustainable apparel brand founded in 2019. We design ethically sourced, climate-conscious clothing for everyday wear. Our hero product line — the Terra Collection — has won two national sustainability awards and ships across APAC.</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ob-btn-row">
+      <button class="btn-ob-outline" onclick="goToStep('login')">← Back</button>
+      <button class="btn-ob-primary" style="width:auto;padding:12px 36px;" onclick="goToStep('goal')">Proceed →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: DEFINE GOAL -->
+  <div id="step-goal" class="ob-step" style="flex-direction:column;">
+    <nav class="ob-nav">
+      <div class="ob-nav-logo">
+        <div class="mark"><span class="iconify text-white" style="font-size:16px;" data-icon="hugeicons:compass"></span></div>
+        <span class="brand">Internationalization</span>
+      </div>
+      <div class="ob-nav-actions">
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:notification-02" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:menu-01" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-avatar">N</div>
+      </div>
+    </nav>
+    <div class="ob-body">
+      <div style="max-width:680px;margin:0 auto;">
+        <h2 style="font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;text-align:center;">Define Goal</h2>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:28px;text-align:center;">What are you trying to achieve? Select one primary goal.</p>
+        <div class="goal-list" id="goal-list">
+          <div class="goal-item selected" onclick="selectGoal(this)">
+            <div class="goal-icon"><span class="iconify" data-icon="hugeicons:chart-increase"></span></div>
+            <div class="goal-text">
+              <strong>Increase Revenue</strong>
+              <span>Expand sales into new international markets and grow top-line revenue.</span>
+            </div>
+            <div class="goal-check"><span class="iconify" data-icon="hugeicons:tick-02" style="font-size:12px;color:#fff;display:none;" id="chk-0"></span></div>
+          </div>
+          <div class="goal-item" onclick="selectGoal(this)">
+            <div class="goal-icon"><span class="iconify" data-icon="hugeicons:distribution"></span></div>
+            <div class="goal-text">
+              <strong>Find Distributors</strong>
+              <span>Identify and onboard local distribution partners in the target market.</span>
+            </div>
+            <div class="goal-check"><span class="iconify" data-icon="hugeicons:tick-02" style="font-size:12px;color:#fff;display:none;"></span></div>
+          </div>
+          <div class="goal-item" onclick="selectGoal(this)">
+            <div class="goal-icon"><span class="iconify" data-icon="hugeicons:computer"></span></div>
+            <div class="goal-text">
+              <strong>Launch Digital Product</strong>
+              <span>Introduce a new digital-first offering or e-commerce channel internationally.</span>
+            </div>
+            <div class="goal-check"><span class="iconify" data-icon="hugeicons:tick-02" style="font-size:12px;color:#fff;display:none;"></span></div>
+          </div>
+          <div class="goal-item" onclick="selectGoal(this)">
+            <div class="goal-icon"><span class="iconify" data-icon="hugeicons:building-04"></span></div>
+            <div class="goal-text">
+              <strong>Build Local Presence</strong>
+              <span>Establish a physical footprint, local team, or regional office in a new market.</span>
+            </div>
+            <div class="goal-check"><span class="iconify" data-icon="hugeicons:tick-02" style="font-size:12px;color:#fff;display:none;"></span></div>
+          </div>
+          <div class="goal-item" onclick="selectGoal(this)">
+            <div class="goal-icon"><span class="iconify" data-icon="hugeicons:factory-02"></span></div>
+            <div class="goal-text">
+              <strong>Manufacturing / Operations</strong>
+              <span>Optimise supply chain by sourcing manufacturing or operations in new geographies.</span>
+            </div>
+            <div class="goal-check"><span class="iconify" data-icon="hugeicons:tick-02" style="font-size:12px;color:#fff;display:none;"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ob-btn-row">
+      <button class="btn-ob-outline" onclick="goToStep('profile')">← Back</button>
+      <button class="btn-ob-primary" style="width:auto;padding:12px 36px;" onclick="goToStep('mode')">Proceed →</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: SELECT MARKET ENTRY MODE -->
+  <div id="step-mode" class="ob-step" style="flex-direction:column;">
+    <nav class="ob-nav">
+      <div class="ob-nav-logo">
+        <div class="mark"><span class="iconify text-white" style="font-size:16px;" data-icon="hugeicons:compass"></span></div>
+        <span class="brand">Internationalization</span>
+      </div>
+      <div class="ob-nav-actions">
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:notification-02" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:menu-01" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-avatar">N</div>
+      </div>
+    </nav>
+    <div class="ob-body">
+      <div style="max-width:900px;margin:0 auto;">
+        <!-- Illustration -->
+        <div style="text-align:center;margin-bottom:28px;">
+          <svg width="90" height="70" viewBox="0 0 90 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="30" width="70" height="36" rx="4" fill="#e8edf7" stroke="#c7d2e8" stroke-width="1.5"/>
+            <rect x="33" y="14" width="24" height="52" rx="3" fill="#fff" stroke="#c7d2e8" stroke-width="1.5"/>
+            <rect x="38" y="20" width="5" height="6" rx="1" fill="#11205D" opacity=".4"/>
+            <rect x="47" y="20" width="5" height="6" rx="1" fill="#11205D" opacity=".4"/>
+            <rect x="38" y="30" width="5" height="6" rx="1" fill="#11205D" opacity=".4"/>
+            <rect x="47" y="30" width="5" height="6" rx="1" fill="#11205D" opacity=".4"/>
+            <rect x="38" y="40" width="5" height="4" rx="1" fill="#11205D" opacity=".25"/>
+            <rect x="47" y="40" width="5" height="4" rx="1" fill="#11205D" opacity=".25"/>
+            <rect x="40" y="52" width="10" height="14" rx="2" fill="#11205D" opacity=".5"/>
+            <path d="M10 66 Q45 58 80 66" stroke="#c7d2e8" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <h2 style="font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;text-align:center;">Select Market Entry Mode</h2>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:24px;text-align:center;">Choose the strategic framework that best fits your business stage and risk tolerance.</p>
+        <table class="mode-table" id="mode-table">
+          <thead>
+            <tr>
+              <th style="width:40px;"></th>
+              <th>Model</th>
+              <th>Speed</th>
+              <th>Cost</th>
+              <th>Risk</th>
+              <th>Control</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="selectMode(this, 'uppsala')" class="mode-row">
+              <td><input type="radio" class="mode-radio" name="entry-mode" /></td>
+              <td><span style="font-weight:700;">Uppsala Model</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Slow</span></td>
+              <td><span style="color:#15803d;font-weight:600;">Low → Medium</span></td>
+              <td><span style="color:#15803d;font-weight:600;">Low</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium → High</span></td>
+              <td style="color:var(--muted);">SMEs entering unfamiliar markets</td>
+            </tr>
+            <tr onclick="selectMode(this, 'innovation')" class="mode-row mode-selected">
+              <td><input type="radio" class="mode-radio" name="entry-mode" checked /></td>
+              <td><span style="font-weight:700;">Innovation Models</span><span class="badge-recommended">RECOMMENDED</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td><span style="color:#15803d;font-weight:600;">Low → Medium</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td style="color:var(--muted);">B2B with product-led growth</td>
+            </tr>
+            <tr onclick="selectMode(this, 'eclectic')" class="mode-row">
+              <td><input type="radio" class="mode-radio" name="entry-mode" /></td>
+              <td><span style="font-weight:700;">Eclectic Paradigm</span></td>
+              <td><span style="color:#b91c1c;font-weight:600;">Medium → Slow</span></td>
+              <td><span style="color:#b91c1c;font-weight:600;">High</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td><span style="color:#b91c1c;font-weight:600;">High</span></td>
+              <td style="color:var(--muted);">Strategic FDI decisions</td>
+            </tr>
+            <tr onclick="selectMode(this, 'bornglobal')" class="mode-row">
+              <td><input type="radio" class="mode-radio" name="entry-mode" /></td>
+              <td><span style="font-weight:700;">Born Global</span></td>
+              <td><span style="color:#15803d;font-weight:600;">Fast</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td><span style="color:#b91c1c;font-weight:600;">High</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Low → Medium</span></td>
+              <td style="color:var(--muted);">Digital-first / SaaS companies</td>
+            </tr>
+            <tr onclick="selectMode(this, 'transaction')" class="mode-row">
+              <td><input type="radio" class="mode-radio" name="entry-mode" /></td>
+              <td><span style="font-weight:700;">Transaction Cost Model</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium → High</span></td>
+              <td><span style="color:#15803d;font-weight:600;">Low → Medium</span></td>
+              <td><span style="color:#92400e;font-weight:600;">Medium → High</span></td>
+              <td style="color:var(--muted);">Cost optimisation decisions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="ob-btn-row">
+      <button class="btn-ob-outline" onclick="goToStep('goal')">← Back</button>
+      <button class="btn-ob-primary" style="width:auto;padding:12px 36px;" onclick="goToStep('generating')">Proceed →</button>
+    </div>
+  </div>
+
+  <!-- STEP 5: GENERATING -->
+  <div id="step-generating" class="ob-step" style="flex-direction:column;">
+    <nav class="ob-nav">
+      <div class="ob-nav-logo">
+        <div class="mark"><span class="iconify text-white" style="font-size:16px;" data-icon="hugeicons:compass"></span></div>
+        <span class="brand">Internationalization</span>
+      </div>
+      <div class="ob-nav-actions">
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:notification-02" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-icon"><span class="iconify" data-icon="hugeicons:menu-01" style="font-size:18px;color:var(--muted);"></span></div>
+        <div class="ob-nav-avatar">N</div>
+      </div>
+    </nav>
+    <div class="ob-body" style="display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;max-width:520px;">
+        <!-- Stacked papers illustration -->
+        <div style="position:relative;width:120px;height:110px;margin:0 auto 28px;">
+          <div style="position:absolute;bottom:0;left:12px;width:96px;height:78px;background:#e8edf7;border-radius:10px;border:1.5px solid #c7d2e8;transform:rotate(-6deg);"></div>
+          <div style="position:absolute;bottom:0;left:6px;width:96px;height:78px;background:#f0f4ff;border-radius:10px;border:1.5px solid #c7d2e8;transform:rotate(-2deg);"></div>
+          <div style="position:absolute;bottom:0;left:10px;width:96px;height:88px;background:#fff;border-radius:10px;border:1.5px solid #c7d2e8;padding:14px 12px;">
+            <div style="height:6px;background:#e8edf7;border-radius:4px;margin-bottom:7px;"></div>
+            <div style="height:6px;background:#e8edf7;border-radius:4px;margin-bottom:7px;width:75%;"></div>
+            <div style="height:6px;background:#e8edf7;border-radius:4px;margin-bottom:7px;width:88%;"></div>
+            <div style="height:6px;background:var(--primary-light);border-radius:4px;width:60%;"></div>
+          </div>
+          <!-- Sparkle badge -->
+          <div style="position:absolute;top:-4px;right:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#e879f9,#8b5cf6);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(139,92,246,.35);">
+            <span class="iconify" data-icon="hugeicons:sparkles" style="font-size:15px;color:#fff;"></span>
+          </div>
+        </div>
+
+        <h2 style="font-size:24px;font-weight:800;color:var(--text);margin-bottom:10px;">Generating Market Planner....</h2>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:28px;">We're analysing your profile, target market, and selected entry mode to build a comprehensive, data-led market entry plan tailored to your business.</p>
+
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;">
+          <div class="generating-chip">
+            <span class="iconify" data-icon="hugeicons:location-01" style="font-size:14px;color:var(--primary);"></span> Australia
+          </div>
+          <div class="generating-chip">
+            <span class="iconify" data-icon="hugeicons:t-shirt" style="font-size:14px;color:var(--primary);"></span> Textiles &amp; Apparel
+          </div>
+          <div class="generating-chip">
+            <span class="iconify" data-icon="hugeicons:hierarchy-square-02" style="font-size:14px;color:var(--primary);"></span> Uppsala Mode
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:center;align-items:center;">
+          <button class="btn-ob-outline" onclick="goToStep('mode')">← Abort &amp; Back</button>
+          <button class="btn-ob-primary" id="generating-btn" style="width:auto;padding:12px 32px;display:flex;align-items:center;gap:10px;" disabled>
+            <div class="spin-dots"><span></span><span></span><span></span></div>
+            Generating....
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end #onboarding-overlay -->
+
+<!-- ════════════════ DASHBOARD APP ════════════════ -->
+<div id="dashboard-app" class="flex" style="height:100vh;overflow:hidden;display:none;">
 
 <!-- ════════════════ SIDEBAR ════════════════ -->
 <div id="sidebar" class="flex flex-col py-5 overflow-y-auto">
@@ -3486,10 +3929,104 @@
 
   </div><!-- end scroll area -->
 </div><!-- end main -->
+
+</div><!-- end #dashboard-app -->
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
 <script>
+/* ── Onboarding Flow ── */
+function goToStep(id) {
+  document.querySelectorAll('.ob-step').forEach(s => s.classList.remove('active'));
+  const t = document.getElementById('step-' + id);
+  if (t) t.classList.add('active');
+  if (id === 'login') initSphere();
+  if (id === 'generating') startGenerating();
+}
+
+function togglePw() {
+  const i = document.getElementById('pw-input');
+  i.type = i.type === 'password' ? 'text' : 'password';
+}
+
+function selectGoal(el) {
+  document.querySelectorAll('.goal-item').forEach(g => {
+    g.classList.remove('selected');
+    const chk = g.querySelector('.goal-check .iconify');
+    if (chk) chk.style.display = 'none';
+  });
+  el.classList.add('selected');
+  const chk = el.querySelector('.goal-check .iconify');
+  if (chk) chk.style.display = '';
+}
+
+function selectMode(row) {
+  document.querySelectorAll('.mode-row').forEach(r => r.classList.remove('mode-selected'));
+  row.classList.add('mode-selected');
+  row.querySelector('input[type=radio]').checked = true;
+}
+
+function startGenerating() {
+  setTimeout(() => launchDashboard(), 3200);
+}
+
+function launchDashboard() {
+  document.getElementById('onboarding-overlay').style.display = 'none';
+  const app = document.getElementById('dashboard-app');
+  app.style.display = 'flex';
+  setNav('overview');
+}
+
+/* ── Canvas Sphere Animation ── */
+function initSphere() {
+  const canvas = document.getElementById('sphere-canvas');
+  if (!canvas || canvas._init) return;
+  canvas._init = true;
+  const ctx = canvas.getContext('2d');
+  const W = () => canvas.offsetWidth;
+  const H = () => canvas.offsetHeight;
+  let dots = [], rot = 0;
+  const R = 130, N = 260;
+
+  function resize() { canvas.width = W(); canvas.height = H(); buildDots(); }
+  function buildDots() {
+    dots = [];
+    for (let i = 0; i < N; i++) {
+      const phi = Math.acos(1 - 2 * (i + .5) / N);
+      const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+      dots.push({ ox: Math.sin(phi) * Math.cos(theta), oy: Math.cos(phi), oz: Math.sin(phi) * Math.sin(theta) });
+    }
+  }
+  function frame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    rot += .004;
+    const cx = canvas.width / 2, cy = canvas.height / 2;
+    const cos = Math.cos(rot), sin = Math.sin(rot);
+    dots.forEach(d => {
+      const x = d.ox * cos - d.oz * sin;
+      const z = d.ox * sin + d.oz * cos;
+      const y = d.oy;
+      const scale = (z + 1.4) / 2.4;
+      const t = (z + 1) / 2;
+      const r = Math.round(220 + (245 - 220) * t);
+      const g = Math.round(100 + (180 - 100) * t);
+      const b = Math.round(10 + (60 - 10) * t);
+      ctx.beginPath();
+      ctx.arc(cx + x * R, cy - y * R, scale * 2.2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${r},${g},${b},${scale * .85})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  frame();
+}
+
+// Boot: sphere starts on login which is the first step shown
+window.addEventListener('DOMContentLoaded', () => initSphere());
+
+/* ── Dashboard Navigation ── */
 const pages = ['overview','business','market','entry','financial','risk','roadmap','compare','pestle'];
 function setNav(key) {
   // Remove active from nav items
