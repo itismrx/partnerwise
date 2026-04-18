@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EcoThread — Market Entry Plan · Australia 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#11205D;--navy-mid:#2d4899;--navy-light:#e8edf7;
+  --amber:#f59e0b;--amber-light:#fef3c7;
+  --green:#15803d;--green-light:#dcfce7;
+  --red:#b91c1c;--red-light:#fee2e2;
+  --muted:#64748b;--border:#e5e9f0;--text:#0f172a;
+}
+body{font-family:'Figtree',sans-serif;background:#c8d3e8;color:var(--text);}
+
+/* ── Controls bar ── */
+.ctrl-bar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:11px 32px;box-shadow:0 2px 16px rgba(0,0,0,.35);}
+.ctrl-brand{display:flex;align-items:center;gap:10px;}
+.ctrl-mark{width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.ctrl-mark svg{width:18px;height:18px;}
+.ctrl-name{font-size:15px;font-weight:800;letter-spacing:-.02em;}
+.ctrl-doc{font-size:12px;opacity:.55;margin-left:12px;font-weight:500;}
+.ctrl-actions{display:flex;gap:10px;align-items:center;}
+.btn-dl{background:var(--amber);color:var(--navy);border:none;padding:9px 22px;border-radius:99px;font-size:13px;font-weight:700;font-family:'Figtree',sans-serif;cursor:pointer;display:flex;align-items:center;gap:7px;transition:opacity .15s;}
+.btn-dl:hover{opacity:.88;}
+.btn-dl svg{width:15px;height:15px;}
+.btn-back{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:99px;font-size:13px;font-weight:600;font-family:'Figtree',sans-serif;cursor:pointer;text-decoration:none;transition:background .15s;}
+.btn-back:hover{background:rgba(255,255,255,.18);}
+
+/* ── Report wrapper ── */
+.rpt-wrap{padding:68px 0 48px;}
+
+/* ── Page ── */
+.page{width:210mm;min-height:297mm;background:#fff;margin:0 auto 10mm;position:relative;box-shadow:0 4px 32px rgba(17,32,93,.18);overflow:hidden;break-after:page;page-break-after:always;}
+.page:last-child{break-after:auto;page-break-after:auto;}
+
+/* ── Cover ── */
+.cover{background:var(--navy);color:#fff;height:297mm;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.cov-geo1{position:absolute;right:-28mm;top:20mm;width:130mm;height:130mm;border:1px solid rgba(255,255,255,.07);border-radius:50%;pointer-events:none;}
+.cov-geo2{position:absolute;right:-10mm;top:5mm;width:85mm;height:85mm;border:1px solid rgba(245,158,11,.12);border-radius:50%;pointer-events:none;}
+.cov-geo3{position:absolute;right:15mm;bottom:40mm;width:60mm;height:60mm;background:rgba(245,158,11,.05);border-radius:50%;pointer-events:none;}
+.cov-geo4{position:absolute;left:-20mm;bottom:60mm;width:90mm;height:90mm;border:1px solid rgba(255,255,255,.04);border-radius:50%;pointer-events:none;}
+.cov-top{padding:20mm 20mm 0;flex:1;}
+.cov-logo{display:flex;align-items:center;gap:12px;margin-bottom:52mm;}
+.cov-mark{width:44px;height:44px;background:var(--amber);border-radius:11px;display:flex;align-items:center;justify-content:center;}
+.cov-mark svg{width:24px;height:24px;fill:var(--navy);}
+.cov-brand{font-size:20px;font-weight:800;letter-spacing:-.02em;}
+.cov-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;}
+.cov-h1{font-size:44px;font-weight:900;line-height:1.05;margin-bottom:8px;}
+.cov-sub{font-size:22px;font-weight:400;opacity:.65;margin-bottom:30px;}
+.cov-chips{display:flex;gap:10px;flex-wrap:wrap;}
+.cov-chip{padding:6px 16px;border:1px solid rgba(255,255,255,.22);border-radius:99px;font-size:11.5px;font-weight:600;opacity:.82;}
+.cov-bot{padding:8mm 20mm;background:rgba(0,0,0,.22);display:flex;justify-content:space-between;align-items:center;}
+.cov-bot p{font-size:10.5px;opacity:.55;}
+.cov-score{display:flex;align-items:center;gap:12px;}
+.cov-score-label{font-size:10px;opacity:.5;font-weight:600;}
+.cov-score-val{font-size:28px;font-weight:900;color:var(--amber);}
+.cov-score-sub{font-size:9.5px;opacity:.45;}
+
+/* ── Inner page ── */
+.pi{padding:14mm 17mm 12mm;height:297mm;display:flex;flex-direction:column;}
+
+/* Page header */
+.ph{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7mm;padding-bottom:4mm;border-bottom:2.5px solid var(--navy);}
+.ph-eyebrow{font-size:8.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:3px;}
+.ph-title{font-size:19px;font-weight:800;color:var(--navy);line-height:1.2;}
+.ph-meta{text-align:right;}
+.ph-company{font-size:10.5px;font-weight:600;color:var(--muted);}
+.ph-pg{font-size:10px;color:#94a3b8;margin-top:2px;}
+
+/* Page footer */
+.pf{margin-top:auto;padding-top:3.5mm;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+.pf p{font-size:8.5px;color:#94a3b8;}
+
+/* ── Typography ── */
+h3{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:5px;}
+h4{font-size:11px;font-weight:700;color:var(--text);margin-bottom:3px;}
+p,li{font-size:11px;line-height:1.65;color:#334155;}
+
+/* ── Section label ── */
+.slbl{font-size:8.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+
+/* ── Spacer ── */
+.sp2{margin-bottom:5mm;}
+.sp1{margin-bottom:3mm;}
+
+/* ── KPI grid ── */
+.kpi5{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:6mm;}
+.kpi4{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:6mm;}
+.kpi3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:6mm;}
+.ktile{background:var(--navy-light);border-radius:8px;padding:9px 10px;}
+.ktile .kl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:4px;}
+.ktile .kv{font-size:16px;font-weight:800;color:var(--navy);line-height:1;}
+.ktile .ks{font-size:9.5px;color:var(--muted);margin-top:2px;}
+.ktile.kg{background:var(--green-light);}.ktile.kg .kv{color:var(--green);}
+.ktile.ka{background:var(--amber-light);}.ktile.ka .kv{color:#92400e;}
+.ktile.kr{background:var(--red-light);}.ktile.kr .kv{color:var(--red);}
+
+/* ── Table ── */
+table{width:100%;border-collapse:collapse;font-size:10.5px;}
+thead th{background:var(--navy);color:#fff;padding:6px 9px;font-weight:700;font-size:9.5px;letter-spacing:.03em;text-align:left;}
+thead th:first-child{border-radius:5px 0 0 0;}
+thead th:last-child{border-radius:0 5px 0 0;}
+tbody tr:nth-child(even){background:#f8fafc;}
+tbody td{padding:6px 9px;border-bottom:1px solid var(--border);vertical-align:top;font-size:10.5px;color:#334155;line-height:1.5;}
+tbody tr:last-child td{border-bottom:none;}
+
+/* ── Badges ── */
+.b{display:inline-block;padding:1.5px 7px;border-radius:99px;font-size:9px;font-weight:700;white-space:nowrap;}
+.bh{background:var(--red-light);color:var(--red);}
+.bm{background:var(--amber-light);color:#92400e;}
+.bl{background:var(--green-light);color:var(--green);}
+.bn{background:var(--navy-light);color:var(--navy);}
+.bp{background:#f0fdf4;color:var(--green);}
+.bmix{background:#fefce8;color:#92400e;}
+.bneg{background:#fff1f2;color:#be123c;}
+
+/* ── Score bar ── */
+.sb{height:4px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:3px;}
+.sbf{height:100%;border-radius:99px;}
+
+/* ── 2-col / 3-col ── */
+.c2{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.c3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.c21{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;}
+
+/* ── Card ── */
+.card{background:#fff;border:1px solid var(--border);border-radius:9px;padding:10px 12px;}
+.card.nv{background:var(--navy);border-color:var(--navy);}
+.card.nv h3,.card.nv h4,.card.nv p,.card.nv li{color:rgba(255,255,255,.88);}
+.card.nv .slbl{color:rgba(255,255,255,.4);}
+.card.lt{background:var(--navy-light);border-color:#c7d4ec;}
+
+/* ── Decision banner ── */
+.dec-banner{background:var(--navy);border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:14px;margin-bottom:8mm;}
+.dec-icon{width:42px;height:42px;border-radius:50%;background:var(--amber);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.dec-text h3{font-size:15px;font-weight:800;color:#fff;margin-bottom:1px;}
+.dec-text p{font-size:10.5px;color:rgba(255,255,255,.65);line-height:1.5;}
+
+/* ── SWOT grid ── */
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1;}
+.swot-s{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:9px;padding:10px 12px;}
+.swot-w{background:#fff1f2;border:1px solid #fecdd3;border-radius:9px;padding:10px 12px;}
+.swot-o{background:#eff6ff;border:1px solid #bfdbfe;border-radius:9px;padding:10px 12px;}
+.swot-t{background:var(--amber-light);border:1px solid #fde68a;border-radius:9px;padding:10px 12px;}
+.swot-s h4{color:#15803d;font-size:11.5px;margin-bottom:7px;}
+.swot-w h4{color:#be123c;font-size:11.5px;margin-bottom:7px;}
+.swot-o h4{color:#1d4ed8;font-size:11.5px;margin-bottom:7px;}
+.swot-t h4{color:#92400e;font-size:11.5px;margin-bottom:7px;}
+.swot-s ul,.swot-w ul,.swot-o ul,.swot-t ul{padding-left:12px;}
+.swot-s li,.swot-w li,.swot-o li,.swot-t li{font-size:10px;line-height:1.6;}
+
+/* ── Uppsala stages ── */
+.stg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.stg{border-radius:9px;border:1px solid var(--border);padding:12px;}
+.stg.cur{background:var(--navy);border-color:var(--navy);}
+.stg-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:7px;}
+.stg.cur .stg-num{background:var(--amber);color:var(--navy);}
+.stg h4{font-size:11.5px;margin-bottom:4px;}
+.stg.cur h4,.stg.cur p,.stg.cur li{color:rgba(255,255,255,.9);}
+.stg ul{padding-left:12px;margin-top:5px;}
+.stg li{font-size:10px;line-height:1.6;}
+.stg.cur li{color:rgba(255,255,255,.75);}
+.stg-arrow{display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:18px;font-weight:300;}
+
+/* ── Force item ── */
+.force{padding:9px 12px;background:#f8fafc;border:1px solid var(--border);border-radius:8px;}
+.force-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;}
+.force-top h4{font-size:10.5px;}
+.force p{font-size:9.5px;color:var(--muted);line-height:1.5;}
+
+/* ── Phase cards ── */
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.phc{border-radius:9px;overflow:hidden;}
+.phc-hd{padding:8px 12px;color:#fff;font-size:11px;font-weight:700;}
+.phc-hd.p1{background:var(--navy);}
+.phc-hd.p2{background:var(--navy-mid);}
+.phc-hd.p3{background:#4c669f;}
+.phc-bd{padding:10px 12px;background:#f8fafc;border:1px solid var(--border);border-top:none;border-radius:0 0 9px 9px;}
+.phc-bd ul{padding-left:12px;}
+.phc-bd li{font-size:10px;color:#334155;line-height:1.65;}
+.phc-timeline{font-size:9px;color:var(--muted);font-weight:700;margin-bottom:5px;}
+
+/* ── Highlight box ── */
+.hl{border-radius:0 8px 8px 0;padding:8px 12px;margin:6px 0;}
+.hl.nv{background:var(--navy-light);border-left:3px solid var(--navy);}
+.hl.am{background:var(--amber-light);border-left:3px solid var(--amber);}
+.hl.gn{background:var(--green-light);border-left:3px solid #16a34a;}
+.hl.rd{background:var(--red-light);border-left:3px solid var(--red);}
+.hl p{font-size:10.5px;line-height:1.6;}
+.hl h4{font-size:10.5px;margin-bottom:2px;}
+
+/* ── Dot list ── */
+.dl{list-style:none;padding:0;}
+.dl li{display:flex;align-items:flex-start;gap:6px;font-size:10.5px;color:#334155;line-height:1.6;margin-bottom:3px;}
+.dl li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:5px;}
+.dl.am li::before{background:var(--amber);}
+.dl.gn li::before{background:var(--green);}
+.dl.rd li::before{background:var(--red);}
+
+/* ── Revenue bar chart ── */
+.bar-chart{display:flex;align-items:flex-end;gap:3px;height:60px;border-bottom:1px solid var(--border);padding:0 2px;}
+.bar{background:var(--navy-light);border-radius:3px 3px 0 0;flex:1;position:relative;transition:background .2s;}
+.bar.active{background:var(--navy);}
+.bar.proj{background:var(--navy-mid);opacity:.6;}
+
+/* ── Readiness bar ── */
+.rdbar{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+.rdbar-label{font-size:10px;font-weight:600;color:var(--text);width:90px;flex-shrink:0;}
+.rdbar-track{flex:1;height:5px;background:var(--border);border-radius:99px;overflow:hidden;}
+.rdbar-fill{height:100%;border-radius:99px;}
+.rdbar-val{font-size:10px;font-weight:700;color:var(--navy);width:28px;text-align:right;flex-shrink:0;}
+
+/* ── Competitor grid ── */
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.comp-card{border:1px solid var(--border);border-radius:8px;padding:10px 11px;}
+.comp-card h4{font-size:11px;margin-bottom:4px;}
+.comp-card .comp-origin{font-size:9px;color:var(--muted);margin-bottom:5px;}
+.comp-card p{font-size:10px;line-height:1.55;}
+
+/* ── BMC grid ── */
+.bmc{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.bmc-item{border-left:2px solid var(--navy);padding:4px 8px;}
+.bmc-item .bmc-k{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:2px;}
+.bmc-item p{font-size:10px;line-height:1.55;}
+
+/* ── Print ── */
+@media print{
+  .ctrl-bar{display:none!important;}
+  .rpt-wrap{padding:0;}
+  .page{box-shadow:none;margin:0;break-after:page;page-break-after:always;}
+  .page:last-child{break-after:auto;page-break-after:auto;}
+  body{background:#fff;}
+}
+@page{margin:0;size:A4 portrait;}
+</style>
+</head>
+<body>
+
+<!-- ── Controls ── -->
+<div class="ctrl-bar no-print">
+  <div class="ctrl-brand">
+    <div class="ctrl-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19h20L12 2z"/></svg>
+    </div>
+    <span class="ctrl-name">PartnerWise</span>
+    <span class="ctrl-doc">· EcoThread Market Entry Plan — Australia 2026</span>
+  </div>
+  <div class="ctrl-actions">
+    <a href="market_planner_ui.html" class="btn-back">← Back to Dashboard</a>
+    <button class="btn-dl" onclick="downloadPDF()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13M7 11l5 5 5-5M3 19h18"/></svg>
+      Download PDF
+    </button>
+  </div>
+</div>
+
+<div class="rpt-wrap" id="report">
+
+<!-- ═══════════════════════════════════════════
+     PAGE 1 — COVER
+     ═══════════════════════════════════════════ -->
+<div class="page">
+  <div class="cover">
+    <div class="cov-geo1"></div>
+    <div class="cov-geo2"></div>
+    <div class="cov-geo3"></div>
+    <div class="cov-geo4"></div>
+    <div class="cov-top">
+      <div class="cov-logo">
+        <div class="cov-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19h20L12 2z"/></svg>
+        </div>
+        <span class="cov-brand">PartnerWise</span>
+      </div>
+      <div class="cov-eyebrow">Market Entry Plan · Confidential</div>
+      <div class="cov-h1">Market Entry<br>Plan</div>
+      <div class="cov-sub">EcoThread Apparel → Australia</div>
+      <div class="cov-chips">
+        <span class="cov-chip">📍 Target: Australia</span>
+        <span class="cov-chip">🏭 Sector: Textiles &amp; Apparel</span>
+        <span class="cov-chip">🚀 Model: Uppsala</span>
+        <span class="cov-chip">📅 April 2026</span>
+        <span class="cov-chip">⏱ 36-Month Plan</span>
+      </div>
+    </div>
+    <div class="cov-bot">
+      <div>
+        <p style="font-size:11px;font-weight:700;opacity:.7;color:#fff;">Prepared for EcoThread Apparel Pty Ltd</p>
+        <p>PartnerWise Research · nebil@ultraproventures.com · April 15, 2026</p>
+        <p style="margin-top:3px;">This document is confidential and intended solely for the use of EcoThread Apparel Pty Ltd.</p>
+      </div>
+      <div class="cov-score">
+        <div>
+          <div class="cov-score-label">MARKET SCORE</div>
+          <div class="cov-score-val">72</div>
+          <div class="cov-score-sub">/ 100 — Proceed with Caution</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 2 — EXECUTIVE SUMMARY
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Executive Summary</div>
+      <div class="ph-title">Strategic Recommendation &amp; Key Findings</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 2 of 14</div>
+    </div>
+  </div>
+
+  <!-- Decision banner -->
+  <div class="dec-banner">
+    <div class="dec-icon">⚡</div>
+    <div class="dec-text">
+      <h3>PROCEED WITH CAUTION — Market Entry Viable, Conditions Apply</h3>
+      <p>Australia presents a high-opportunity market for EcoThread's sustainable apparel proposition. The market is large, consumer sentiment is aligned, and regulatory requirements are navigable. However, entry should be phased: validate DTC before committing to wholesale distribution, and resolve compliance requirements before scaling.</p>
+    </div>
+  </div>
+
+  <!-- KPI strip -->
+  <div class="kpi5" style="margin-bottom:5mm;">
+    <div class="ktile"><div class="kl">Total Addressable Market</div><div class="kv">AUD 3.4B</div><div class="ks">Sustainable apparel AU 2026</div></div>
+    <div class="ktile kg"><div class="kl">Market Score</div><div class="kv">72/100</div><div class="ks">Proceed with Caution</div></div>
+    <div class="ktile"><div class="kl">Entry Mode</div><div class="kv" style="font-size:12px;">Uppsala</div><div class="ks">Phased, low-risk</div></div>
+    <div class="ktile ka"><div class="kl">Total Budget</div><div class="kv">AUD 420K</div><div class="ks">36-month plan</div></div>
+    <div class="ktile"><div class="kl">Breakeven</div><div class="kv">Month 14</div><div class="ks">Base case scenario</div></div>
+  </div>
+
+  <div class="c2" style="margin-bottom:5mm;">
+    <div>
+      <div class="slbl">Key Opportunities</div>
+      <ul class="dl gn">
+        <li>AUD 3.4B TAM with 11.2% CAGR — sustainable apparel fastest-growing AU segment</li>
+        <li>84% of Australian millennials express willingness to pay premium for ethical clothing</li>
+        <li>Austrade FTA advantages with 0% tariff access reduce cost-to-market substantially</li>
+        <li>AU dollar parity with NZD creates efficient trans-Tasman expansion path post-entry</li>
+        <li>Low incumbent density — no dominant local sustainable brand at premium price point</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slbl">Key Risks &amp; Conditions</div>
+      <ul class="dl rd">
+        <li>ACCC greenwashing enforcement heightened — marketing claims require legal review</li>
+        <li>Distributor lead time 6–9 months — DTC must sustain operations through Phase 1</li>
+        <li>Currency volatility (AUD/USD) can compress margin by up to 18% without hedging</li>
+        <li>Kids product certification (AS/NZS) required for Yr 2 full catalogue — 4-month process</li>
+        <li>Price war risk from mid-market incumbents if premium positioning is miscommunicated</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="c3">
+    <div class="hl nv">
+      <h4>Market Timing</h4>
+      <p>Optimal entry window is Q2–Q3 2026. Consumer sustainability spending is rising post-election; AU fashion week creates earned-media opportunities. Delay beyond Q4 2026 risks incumbents firming market position.</p>
+    </div>
+    <div class="hl am">
+      <h4>Financial Outlook</h4>
+      <p>Year 1: Revenue AUD 180K, net loss −AUD 180K. Year 2: Revenue AUD 540K (distributor activation), margin recovery. Year 3: Revenue AUD 1.26M, EBITDA positive. ROI 340% by Year 3 (optimistic).</p>
+    </div>
+    <div class="hl gn">
+      <h4>Success Probability</h4>
+      <p>68% probability of achieving Year 3 targets under base-case assumptions. Gap items: distributor partnership confirmation (+12%), brand compliance sign-off (+8%), product cert timeline (+7%).</p>
+    </div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 3 — COMPANY PROFILE
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Company Profile</div>
+      <div class="ph-title">EcoThread Apparel — Business Overview &amp; Readiness</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 3 of 14</div>
+    </div>
+  </div>
+
+  <div class="c21" style="margin-bottom:5mm;">
+    <div>
+      <div class="slbl">Company Overview</div>
+      <table style="margin-bottom:8px;">
+        <tbody>
+          <tr><td style="font-weight:700;width:110px;">Founded</td><td>2019 · Sydney, New South Wales, Australia</td></tr>
+          <tr><td style="font-weight:700;">Employees</td><td>47 full-time · 12 contract</td></tr>
+          <tr><td style="font-weight:700;">Current Revenue</td><td>AUD 2.1M (FY2025)</td></tr>
+          <tr><td style="font-weight:700;">Gross Margin</td><td>58% · Net Margin 12%</td></tr>
+          <tr><td style="font-weight:700;">Primary Markets</td><td>New Zealand, Singapore (digital), AU domestic</td></tr>
+          <tr><td style="font-weight:700;">Hero Product</td><td>Terra Collection — sustainable everyday wear</td></tr>
+          <tr><td style="font-weight:700;">Certifications</td><td>GOTS Certified · B-Corp (pending) · Fair Trade</td></tr>
+          <tr><td style="font-weight:700;">Awards</td><td>2× National Sustainability Awards (2023, 2024)</td></tr>
+        </tbody>
+      </table>
+      <div class="hl nv" style="margin-top:4px;">
+        <p>EcoThread designs ethically sourced, climate-conscious clothing for everyday wear. Our manufacturing is 100% renewable-powered, and all dyes are OEKO-TEX certified. We are one of the few AU brands to offer a take-back garment recycling programme.</p>
+      </div>
+    </div>
+    <div>
+      <div class="slbl">International Readiness Score</div>
+      <div style="text-align:center;margin-bottom:8px;">
+        <div style="font-size:32px;font-weight:900;color:var(--navy);">68%</div>
+        <div style="font-size:10px;color:var(--muted);">Moderate Readiness · 3 gaps to address</div>
+      </div>
+      <div class="rdbar"><div class="rdbar-label">Brand Strength</div><div class="rdbar-track"><div class="rdbar-fill" style="width:82%;background:var(--green);"></div></div><div class="rdbar-val">82%</div></div>
+      <div class="rdbar"><div class="rdbar-label">Financial Capacity</div><div class="rdbar-track"><div class="rdbar-fill" style="width:71%;background:var(--navy);"></div></div><div class="rdbar-val">71%</div></div>
+      <div class="rdbar"><div class="rdbar-label">Product Readiness</div><div class="rdbar-track"><div class="rdbar-fill" style="width:76%;background:var(--navy);"></div></div><div class="rdbar-val">76%</div></div>
+      <div class="rdbar"><div class="rdbar-label">Market Knowledge</div><div class="rdbar-track"><div class="rdbar-fill" style="width:65%;background:var(--amber);"></div></div><div class="rdbar-val">65%</div></div>
+      <div class="rdbar"><div class="rdbar-label">Compliance &amp; Legal</div><div class="rdbar-track"><div class="rdbar-fill" style="width:54%;background:var(--amber);"></div></div><div class="rdbar-val">54%</div></div>
+      <div class="rdbar"><div class="rdbar-label">Operations &amp; Supply</div><div class="rdbar-track"><div class="rdbar-fill" style="width:47%;background:var(--red);"></div></div><div class="rdbar-val">47%</div></div>
+    </div>
+  </div>
+
+  <div class="slbl">Business Model Canvas — Key Elements</div>
+  <div class="bmc" style="margin-bottom:5mm;">
+    <div class="bmc-item"><div class="bmc-k">Value Propositions</div><p>Premium sustainable everyday wear; take-back recycling; GOTS &amp; Fair Trade certified; design-led aesthetics without environmental compromise.</p></div>
+    <div class="bmc-item"><div class="bmc-k">Customer Segments</div><p>Eco-conscious millennials (25–40), B2B retailers (premium fashion multi-brand stores), corporate gifting &amp; uniform market.</p></div>
+    <div class="bmc-item"><div class="bmc-k">Channels</div><p>DTC e-commerce (primary), boutique retail partnerships, pop-up activations, wholesale to multi-brand stores.</p></div>
+    <div class="bmc-item"><div class="bmc-k">Key Partners</div><p>GOTS-certified manufacturers (India, Portugal), sustainable logistics (carbon-neutral), Austrade market entry support.</p></div>
+    <div class="bmc-item"><div class="bmc-k">Revenue Streams</div><p>Product sales (DTC 60%, wholesale 40%), seasonal collections, limited-edition collabs, corporate B2B orders.</p></div>
+    <div class="bmc-item"><div class="bmc-k">Cost Structure</div><p>COGS 42%, marketing 22%, logistics 11%, compliance &amp; legal 8%, technology &amp; ops 9%, overheads 8%.</p></div>
+  </div>
+
+  <div class="slbl">Gap Analysis — What Must Be Resolved Before Full Scale</div>
+  <div class="c3">
+    <div class="hl rd"><h4>Operations Gap (−21%)</h4><p>No AU 3PL partner secured. Requires warehouse &amp; fulfilment setup before launch. Estimated 3–4 months to resolve.</p></div>
+    <div class="hl am"><h4>Compliance Gap (−15%)</h4><p>ACCC greenwashing review outstanding. Kids safety cert (AS/NZS) not yet initiated. GST registration required.</p></div>
+    <div class="hl am"><h4>Market Knowledge Gap (−13%)</h4><p>Limited AU consumer research. No local brand awareness. Distributor network not established. Research programme needed.</p></div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 4 — MARKET OPPORTUNITY
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Market Opportunity</div>
+      <div class="ph-title">Australia — Market Size, Demand &amp; Opportunity Scorecard</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 4 of 14</div>
+    </div>
+  </div>
+
+  <div class="kpi4" style="margin-bottom:5mm;">
+    <div class="ktile"><div class="kl">Total Addressable Market</div><div class="kv">AUD 3.4B</div><div class="ks">Sustainable apparel AU 2026</div></div>
+    <div class="ktile kg"><div class="kl">Serviceable Market (SAM)</div><div class="kv">AUD 840M</div><div class="ks">Premium tier, millennial segment</div></div>
+    <div class="ktile ka"><div class="kl">SOM — Year 3 Target</div><div class="kv">AUD 12.6M</div><div class="ks">1.5% SAM share</div></div>
+    <div class="ktile"><div class="kl">Market CAGR</div><div class="kv">11.2%</div><div class="ks">2024–2028 forecast</div></div>
+  </div>
+
+  <div class="kpi5" style="margin-bottom:5mm;">
+    <div class="ktile"><div class="kl">Avg Order Value</div><div class="kv">AUD 147</div><div class="ks">DTC channel</div></div>
+    <div class="ktile kg"><div class="kl">Customer LTV</div><div class="kv">AUD 280</div><div class="ks">24-month LTV est.</div></div>
+    <div class="ktile ka"><div class="kl">CAC (Digital)</div><div class="kv">AUD 38</div><div class="ks">Paid social + SEO</div></div>
+    <div class="ktile"><div class="kl">Opportunity Score</div><div class="kv">72/100</div><div class="ks">Composite index</div></div>
+    <div class="ktile kg"><div class="kl">Ease of Entry</div><div class="kv">6.8/10</div><div class="ks">vs 28 benchmarks</div></div>
+  </div>
+
+  <div class="c2" style="margin-bottom:5mm;">
+    <div>
+      <div class="slbl">Market Drivers</div>
+      <table>
+        <thead><tr><th>Driver</th><th>Strength</th><th>Relevance to EcoThread</th></tr></thead>
+        <tbody>
+          <tr><td>Consumer sustainability awareness</td><td><span class="b bl">High</span></td><td>Core brand alignment</td></tr>
+          <tr><td>Government ESG mandates (2026)</td><td><span class="b bl">High</span></td><td>Tailwind for certified brands</td></tr>
+          <tr><td>E-commerce growth (18% YoY)</td><td><span class="b bl">High</span></td><td>DTC channel viability</td></tr>
+          <tr><td>Premium fashion category growth</td><td><span class="b bm">Medium</span></td><td>Price positioning support</td></tr>
+          <tr><td>FTA tariff advantages</td><td><span class="b bl">High</span></td><td>Reduces landed cost</td></tr>
+          <tr><td>Millennial spending power +14%</td><td><span class="b bm">Medium</span></td><td>Primary customer segment</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="slbl">Market Barriers</div>
+      <table>
+        <thead><tr><th>Barrier</th><th>Severity</th><th>Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td>ACCC greenwashing enforcement</td><td><span class="b bh">High</span></td><td>Legal review of all claims</td></tr>
+          <tr><td>Established competitor brands</td><td><span class="b bm">Medium</span></td><td>Niche premium differentiation</td></tr>
+          <tr><td>Distributor lead times 6–9 mo</td><td><span class="b bm">Medium</span></td><td>DTC-first to bridge gap</td></tr>
+          <tr><td>Product certification (kids)</td><td><span class="b bm">Medium</span></td><td>Phase 2 only; initiate Year 1</td></tr>
+          <tr><td>AUD/USD currency exposure</td><td><span class="b bm">Medium</span></td><td>Forward contracts, hedging</td></tr>
+          <tr><td>Low brand awareness in AU</td><td><span class="b bh">High</span></td><td>Influencer + earned media first</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="slbl">Opportunity Scorecard — Dimension Breakdown</div>
+  <table>
+    <thead>
+      <tr><th>Dimension</th><th>Score</th><th>Weight</th><th>Weighted</th><th>Assessment</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Market Size &amp; Growth</td><td>8.5/10</td><td>20%</td><td>17.0</td><td>Large TAM with strong CAGR</td></tr>
+      <tr><td>Consumer Demand Alignment</td><td>8.0/10</td><td>20%</td><td>16.0</td><td>High purchase intent for sustainability</td></tr>
+      <tr><td>Competitive Intensity</td><td>6.0/10</td><td>15%</td><td>9.0</td><td>Moderate — no dominant sustainable player</td></tr>
+      <tr><td>Regulatory Environment</td><td>6.5/10</td><td>15%</td><td>9.75</td><td>ACCC risk mitigated by certification</td></tr>
+      <tr><td>Ease of Market Entry</td><td>7.5/10</td><td>15%</td><td>11.25</td><td>DTC first reduces capital requirements</td></tr>
+      <tr><td>Strategic Fit</td><td>9.0/10</td><td>15%</td><td>13.5</td><td>Brand &amp; product highly aligned</td></tr>
+      <tr style="background:var(--navy-light);font-weight:700;"><td><strong>COMPOSITE SCORE</strong></td><td><strong>—</strong></td><td><strong>100%</strong></td><td><strong>76.5 → 72 adj.</strong></td><td><strong>Proceed with Caution</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 5 — PESTLE ANALYSIS
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Environmental Analysis</div>
+      <div class="ph-title">PESTLE Analysis — Australia 2026</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 5 of 14</div>
+    </div>
+  </div>
+
+  <table style="font-size:10px;">
+    <thead>
+      <tr>
+        <th style="width:80px;">Dimension</th>
+        <th style="width:50px;">Score</th>
+        <th style="width:60px;">Status</th>
+        <th>Key Factors</th>
+        <th>Watch Points</th>
+        <th>Action for EcoThread</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>🏛 Political</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 7/10</div>
+          <div class="sb"><div class="sbf" style="width:70%;background:var(--green);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 2/10</div>
+          <div class="sb"><div class="sbf" style="width:20%;background:var(--red);"></div></div>
+        </td>
+        <td><span class="b bp">Positive</span></td>
+        <td style="font-size:10px;">Stable democratic government. Strong trade policy with NZ/UK FTA (2022). ESG disclosure mandates for listed companies from 2026. Austrade support for foreign SMEs.</td>
+        <td style="font-size:10px;">State-level policy variation in packaging law. Election cycle impact on ESG prioritisation.</td>
+        <td style="font-size:10px;">Apply for Austrade landing-pad support. Monitor FTA updates for cost optimisation.</td>
+      </tr>
+      <tr>
+        <td><strong>📈 Economic</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 7.5/10</div>
+          <div class="sb"><div class="sbf" style="width:75%;background:var(--green);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 6/10</div>
+          <div class="sb"><div class="sbf" style="width:60%;background:var(--red);"></div></div>
+        </td>
+        <td><span class="b bmix">Mixed</span></td>
+        <td style="font-size:10px;">GDP growth 2.1% (2026 est.). Consumer spending on discretionary up 3.8%. AUD relatively stable. Interest rate normalising after 2024 hikes. Premium segment resilient.</td>
+        <td style="font-size:10px;">AUD/USD volatility. Inflation pressures on cost-conscious mid-tier consumers. Household debt elevated.</td>
+        <td style="font-size:10px;">Target premium segment to reduce price sensitivity. Implement 3–6 month forward FX contracts from month 3.</td>
+      </tr>
+      <tr>
+        <td><strong>👥 Social</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 8.5/10</div>
+          <div class="sb"><div class="sbf" style="width:85%;background:var(--green);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 2/10</div>
+          <div class="sb"><div class="sbf" style="width:20%;background:var(--red);"></div></div>
+        </td>
+        <td><span class="b bp">Positive</span></td>
+        <td style="font-size:10px;">84% millennials willing to pay premium for ethical fashion. Circular fashion awareness rising. Social media fashion influence strong (IG, TikTok). Growing interest in take-back programmes.</td>
+        <td style="font-size:10px;">Greenwashing backlash risk if claims unsubstantiated. Shifting trend cycles in fashion.</td>
+        <td style="font-size:10px;">Lead with credentials (GOTS, Fair Trade). Activate influencer programme with AU sustainability micro-influencers. Promote take-back programme.</td>
+      </tr>
+      <tr>
+        <td><strong>💻 Technology</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 8/10</div>
+          <div class="sb"><div class="sbf" style="width:80%;background:var(--green);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 1.5/10</div>
+          <div class="sb"><div class="sbf" style="width:15%;background:var(--red);"></div></div>
+        </td>
+        <td><span class="b bp">Positive</span></td>
+        <td style="font-size:10px;">High smartphone penetration (94%). E-commerce adoption strong. Afterpay/BNPL dominant in fashion. Shopify ecosystem mature. AU logistics tech advanced (same-day delivery in major cities).</td>
+        <td style="font-size:10px;">Platform dependency (Meta, Google) for digital acquisition. Data privacy regulation tightening (Privacy Act reform).</td>
+        <td style="font-size:10px;">Launch on Shopify AU with Afterpay/Zip integration from Day 1. Diversify acquisition across SEO, email &amp; paid social.</td>
+      </tr>
+      <tr>
+        <td><strong>⚖️ Legal</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 5/10</div>
+          <div class="sb"><div class="sbf" style="width:50%;background:var(--amber);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 7/10</div>
+          <div class="sb"><div class="sbf" style="width:70%;background:var(--red);"></div></div>
+        </td>
+        <td><span class="b bneg">Negative</span></td>
+        <td style="font-size:10px;">ACL consumer protections apply. ACCC greenwashing enforcement escalating. Modern Slavery Act 2018 reporting obligations. GST registration required from AUD 75K revenue. Kids product AS/NZS certification.</td>
+        <td style="font-size:10px;">ACCC investigation pipeline in fashion. Greenwashing penalties up to AUD 50M. Kids cert delays can block Phase 2.</td>
+        <td style="font-size:10px;">AU legal review of all marketing claims before launch. Register for GST. Initiate kids cert process in Month 2. Conduct Modern Slavery supply chain audit.</td>
+      </tr>
+      <tr>
+        <td><strong>🌿 Environmental</strong></td>
+        <td>
+          <div style="font-size:9px;color:var(--muted);">Opp 7.5/10</div>
+          <div class="sb"><div class="sbf" style="width:75%;background:var(--green);"></div></div>
+          <div style="font-size:9px;color:var(--muted);">Risk 4/10</div>
+          <div class="sb"><div class="sbf" style="width:40%;background:var(--amber);"></div></div>
+        </td>
+        <td><span class="b bmix">Mixed</span></td>
+        <td style="font-size:10px;">AU government 43% emission reduction target by 2030. Packaging regulations tightening state-by-state. Sustainability as demand driver (not just PR). Carbon-neutral logistics available.</td>
+        <td style="font-size:10px;">State-by-state packaging law divergence complicates compliance. Carbon tariff/border adjustment policy uncertain.</td>
+        <td style="font-size:10px;">Partner with carbon-neutral logistics provider from Day 1. Source compostable packaging compliant with all AU state requirements before launch.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 6 — PORTER'S FIVE FORCES + SWOT
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Competitive Analysis</div>
+      <div class="ph-title">Porter's Five Forces &amp; SWOT Matrix</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 6 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl" style="margin-bottom:5px;">Porter's Five Forces — Australian Sustainable Apparel Market</div>
+  <div class="c2" style="gap:6px;margin-bottom:6mm;">
+    <div class="force"><div class="force-top"><h4>🔁 Competitive Rivalry</h4><span class="b bm">Medium</span></div><p>No dominant sustainable apparel brand at premium AU tier. Closest competitors: Patagonia (outdoor-focused), Cotton On Eco (mass-market). DTC space fragmented with 40+ micro-brands, none with &gt;5% share in the premium sustainability niche EcoThread targets.</p></div>
+    <div class="force"><div class="force-top"><h4>🆕 Threat of New Entrants</h4><span class="b bm">Medium</span></div><p>Barriers to entry moderate. Brand building &amp; certification are meaningful moats. ACCC compliance raises entry cost for foreign brands. However, e-commerce reduces capital threshold. Risk: international fast-fashion brands adding sustainability lines.</p></div>
+    <div class="force"><div class="force-top"><h4>🔄 Supplier Power</h4><span class="b bl">Low–Medium</span></div><p>EcoThread has established supplier relationships (GOTS-certified, India &amp; Portugal). AU-specific 3PL is the gap; 3–4 providers compete for sustainable brand contracts giving EcoThread negotiating leverage once volumes are established.</p></div>
+    <div class="force"><div class="force-top"><h4>🛒 Buyer Power</h4><span class="b bm">Medium</span></div><p>DTC consumers have high switching cost emotionally (brand affinity) but low financially. Wholesale buyers (boutique retailers) have strong negotiating power in Year 1 when EcoThread lacks AU track record. Power reduces as brand recognition grows.</p></div>
+    <div class="force" style="grid-column:1/-1;"><div class="force-top"><h4>↔️ Threat of Substitutes</h4><span class="b bm">Medium</span></div><p>Fast-fashion as substitute for everyday wear. Premium substitutes include: athleisure brands, second-hand / vintage market (growing 24% YoY AU), and international sustainable brands like Allbirds, Patagonia. The take-back programme and GOTS certification create differentiation hard to replicate quickly.</p></div>
+  </div>
+
+  <div class="slbl" style="margin-bottom:5px;">SWOT Analysis — EcoThread in the Australian Market</div>
+  <div class="swot" style="flex:none;">
+    <div class="swot-s"><h4>💪 Strengths</h4><ul><li>GOTS, Fair Trade, OEKO-TEX certified</li><li>Award-winning brand in sustainability space</li><li>Unique take-back garment recycling programme</li><li>Strong millennial social media presence</li><li>Operational in NZ (adjacent market learnings)</li><li>Premium product quality &amp; design</li></ul></div>
+    <div class="swot-w"><h4>⚠️ Weaknesses</h4><ul><li>Zero AU brand awareness at launch</li><li>No AU 3PL / fulfilment infrastructure</li><li>ACCC compliance not yet completed</li><li>Limited international ops experience</li><li>Kids product cert not initiated</li><li>FX hedging not in place</li></ul></div>
+    <div class="swot-o"><h4>🚀 Opportunities</h4><ul><li>AUD 3.4B TAM growing at 11.2% CAGR</li><li>No dominant premium sustainable brand in AU</li><li>Government ESG mandates creating demand</li><li>Earned media via AU Fashion Week</li><li>Austrade landing-pad programme available</li><li>BNPL penetration drives AOV uplift</li></ul></div>
+    <div class="swot-t"><h4>⚡ Threats</h4><ul><li>ACCC greenwashing enforcement (AUD 50M penalties)</li><li>Fast-fashion sustainability-washing competition</li><li>Currency depreciation compressing AU margin</li><li>Distributor power in early stages</li><li>Incumbent price war if differentiation is weak</li><li>Consumer trust backlash to unverified claims</li></ul></div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 7 — COMPETITIVE LANDSCAPE
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Competitive Landscape</div>
+      <div class="ph-title">Competitor Mapping &amp; Market Positioning</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 7 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl">Competitor Comparison Matrix</div>
+  <table style="margin-bottom:6mm;">
+    <thead>
+      <tr><th>Brand</th><th>Origin</th><th>Price Tier</th><th>Sustainability</th><th>AU Market Share</th><th>Channel</th><th>EcoThread Threat</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Patagonia</strong></td>
+        <td>USA</td>
+        <td>Premium</td>
+        <td><span class="b bl">Very High</span></td>
+        <td>4.2% (outdoor)</td>
+        <td>DTC + own stores</td>
+        <td><span class="b bm">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Cotton On Eco</strong></td>
+        <td>AU</td>
+        <td>Mass-market</td>
+        <td><span class="b bm">Medium</span></td>
+        <td>8.7% (all apparel)</td>
+        <td>Stores + DTC</td>
+        <td><span class="b bl">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Arnhem</strong></td>
+        <td>AU</td>
+        <td>Premium</td>
+        <td><span class="b bm">Medium</span></td>
+        <td>1.1%</td>
+        <td>DTC + boutiques</td>
+        <td><span class="b bm">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Allbirds</strong></td>
+        <td>NZ/USA</td>
+        <td>Premium</td>
+        <td><span class="b bl">High</span></td>
+        <td>2.8% (footwear)</td>
+        <td>DTC + own stores</td>
+        <td><span class="b bl">Low</span></td>
+      </tr>
+      <tr>
+        <td><strong>Spell</strong></td>
+        <td>AU</td>
+        <td>Luxury-adjacent</td>
+        <td><span class="b bm">Medium</span></td>
+        <td>0.8%</td>
+        <td>DTC</td>
+        <td><span class="b bm">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>H&amp;M Conscious</strong></td>
+        <td>Sweden</td>
+        <td>Mid-market</td>
+        <td><span class="b bm">Low–Med</span></td>
+        <td>6.1% (all apparel)</td>
+        <td>Stores + DTC</td>
+        <td><span class="b bl">Low</span></td>
+      </tr>
+      <tr style="background:var(--navy-light);">
+        <td><strong>EcoThread ← YOU</strong></td>
+        <td>AU</td>
+        <td>Premium</td>
+        <td><span class="b bl">Very High</span></td>
+        <td>0% (new entrant)</td>
+        <td>DTC-first</td>
+        <td><span class="b bn">Target</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="slbl">Positioning Analysis — EcoThread's White Space</div>
+  <div class="c2" style="margin-bottom:5mm;">
+    <div class="hl nv">
+      <h4>Premium Sustainability Gap</h4>
+      <p>No current AU brand occupies the intersection of <strong>premium price + full-supply-chain certification + circular economy (take-back)</strong>. Patagonia is close but outdoor-focused. This white space is EcoThread's primary strategic opportunity and must be defended through brand storytelling and certification prominently.</p>
+    </div>
+    <div class="hl am">
+      <h4>Differentiation Levers</h4>
+      <ul class="dl" style="margin-top:4px;">
+        <li>Take-back garment recycling — unique in AU everyday wear</li>
+        <li>GOTS + Fair Trade + OEKO-TEX triple certification</li>
+        <li>Carbon-neutral logistics from Day 1</li>
+        <li>Transparent supply chain storytelling</li>
+        <li>B-Corp certification in progress (Year 1 completion)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slbl">Competitive Response Playbook</div>
+  <table>
+    <thead><tr><th>Scenario</th><th>Trigger</th><th>EcoThread Response</th></tr></thead>
+    <tbody>
+      <tr><td>Incumbent price war</td><td>Competitor drops price &gt;15% to defend shelf space</td><td>Hold premium positioning; reinforce certification value; accelerate brand PR</td></tr>
+      <tr><td>Competitor adds certifications</td><td>Major player obtains GOTS or launches take-back</td><td>Accelerate B-Corp; deepen circular programme; build community lock-in</td></tr>
+      <tr><td>New sustainable entrant</td><td>Funded startup enters AU premium segment</td><td>Accelerate distributor relationships; invest in brand awareness before they establish</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 8 — ENTRY STRATEGY
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Entry Strategy</div>
+      <div class="ph-title">Uppsala Model — Phased Market Entry Framework</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 8 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl" style="margin-bottom:6px;">Why Uppsala? Strategic Rationale</div>
+  <div class="hl nv" style="margin-bottom:6mm;">
+    <p>The Uppsala model is optimal for EcoThread because: (1) Australia is a <strong>psychically close</strong> market (same language, similar consumer values) reducing knowledge acquisition time; (2) EcoThread has no AU operational infrastructure — phased entry minimises capital at risk; (3) The model allows DTC validation before committing to wholesale partnerships; (4) Revenue milestones gate each phase transition, protecting the balance sheet.</p>
+  </div>
+
+  <div class="slbl" style="margin-bottom:6px;">Three-Stage Entry Plan</div>
+  <div class="stg-grid" style="margin-bottom:6mm;">
+    <div class="stg cur">
+      <div class="stg-num">1</div>
+      <h4>Phase 1 — Establish</h4>
+      <p style="font-size:9.5px;opacity:.8;margin-bottom:6px;">Months 1–12 · AUD 180K budget</p>
+      <p style="font-size:9.5px;margin-bottom:5px;">DTC e-commerce launch, brand awareness, compliance foundation.</p>
+      <ul>
+        <li>Launch Shopify AU storefront + Afterpay/Zip</li>
+        <li>ACCC legal review &amp; GST registration</li>
+        <li>AU logistics partner (3PL) secured</li>
+        <li>Influencer programme (20 micro-influencers)</li>
+        <li>Brand PR — AU Fashion Week pitch</li>
+        <li>Revenue target: AUD 180K</li>
+      </ul>
+      <div style="margin-top:8px;padding-top:6px;border-top:1px solid rgba(255,255,255,.2);">
+        <div style="font-size:8.5px;opacity:.6;font-weight:700;">GATE TO PROCEED</div>
+        <div style="font-size:9.5px;opacity:.8;">Rev ≥ AUD 150K · CAC ≤ AUD 45 · NPS ≥ 55</div>
+      </div>
+    </div>
+    <div class="stg">
+      <div class="stg-num">2</div>
+      <h4>Phase 2 — Grow</h4>
+      <p style="font-size:9.5px;color:var(--muted);margin-bottom:6px;">Months 13–24 · AUD 160K budget</p>
+      <p style="font-size:9.5px;color:#334155;margin-bottom:5px;">Distributor activation, channel expansion, brand momentum.</p>
+      <ul>
+        <li>Wholesale partnerships with 3–5 boutique retailers</li>
+        <li>Distributor channel launch (M7 within phase)</li>
+        <li>Kids product certification completion</li>
+        <li>B-Corp certification submission</li>
+        <li>Marketing spend scaled (paid social)</li>
+        <li>Revenue target: AUD 540K</li>
+      </ul>
+      <div style="margin-top:8px;padding-top:6px;border-top:1px solid var(--border);">
+        <div style="font-size:8.5px;color:var(--muted);font-weight:700;">GATE TO PROCEED</div>
+        <div style="font-size:9.5px;color:#334155;">Rev ≥ AUD 450K · Margin ≥ 52% · 2+ distributors</div>
+      </div>
+    </div>
+    <div class="stg">
+      <div class="stg-num">3</div>
+      <h4>Phase 3 — Scale</h4>
+      <p style="font-size:9.5px;color:var(--muted);margin-bottom:6px;">Months 25–36 · AUD 80K budget</p>
+      <p style="font-size:9.5px;color:#334155;margin-bottom:5px;">Full catalogue, regional expansion, profitability.</p>
+      <ul>
+        <li>Full product catalogue including kids range</li>
+        <li>Explore NZ → AU reverse learnings</li>
+        <li>Corporate B2B / gifting channel</li>
+        <li>B-Corp certification active</li>
+        <li>Assess owned retail pop-up (Sydney/Melbourne)</li>
+        <li>Revenue target: AUD 1.26M</li>
+      </ul>
+      <div style="margin-top:8px;padding-top:6px;border-top:1px solid var(--border);">
+        <div style="font-size:8.5px;color:var(--muted);font-weight:700;">OUTCOME</div>
+        <div style="font-size:9.5px;color:#334155;">EBITDA positive · 1.5% SAM share · ROI ≥ 200%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c2">
+    <div>
+      <div class="slbl">Key Entry Mode Trade-offs</div>
+      <table style="font-size:10px;">
+        <thead><tr><th>Trade-off</th><th>Chosen Path</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>Uppsala vs Born Global</td><td>Uppsala</td><td>Lower capital risk; AU brand building takes time</td></tr>
+          <tr><td>DTC vs Wholesale first</td><td>DTC first</td><td>Validate demand before committing to distributor terms</td></tr>
+          <tr><td>Premium vs Mid-market</td><td>Premium</td><td>Certification justifies price; margin sustainability</td></tr>
+          <tr><td>Own store vs Online only</td><td>Online only (Yr 1–2)</td><td>Capital preservation; lease commitments too early</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="slbl">Critical Success Factors</div>
+      <ul class="dl">
+        <li>Legal clearance of all marketing claims before AU launch — ACCC risk is existential</li>
+        <li>3PL partner operational before first sale — fulfilment is a trust signal</li>
+        <li>Phase 1 revenue gate must be met for investor confidence in Phase 2 funding</li>
+        <li>Distributor relationships initiated in Month 6 to ensure Phase 2 activation timing</li>
+        <li>Brand narrative must lead with proof (certifications) not aspiration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 9 — VALUE PROPOSITION & MARKETING
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Go-to-Market</div>
+      <div class="ph-title">Value Proposition &amp; Marketing Strategy</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 9 of 14</div>
+    </div>
+  </div>
+
+  <div class="c2" style="margin-bottom:5mm;">
+    <div>
+      <div class="slbl">Value Proposition Canvas</div>
+      <div class="card lt" style="margin-bottom:6px;">
+        <div class="slbl">Customer Jobs</div>
+        <ul class="dl" style="margin-top:4px;">
+          <li>Look stylish without compromising values</li>
+          <li>Signal ethical identity through clothing choices</li>
+          <li>Purchase without contributing to fast-fashion waste</li>
+          <li>Trust that sustainability claims are verified</li>
+        </ul>
+      </div>
+      <div class="card lt" style="margin-bottom:6px;">
+        <div class="slbl">Customer Pains</div>
+        <ul class="dl rd" style="margin-top:4px;">
+          <li>Greenwashing — can't trust brand claims</li>
+          <li>Premium sustainable options often lack design appeal</li>
+          <li>Hard to verify supply chain ethics</li>
+          <li>Limited take-back / end-of-life options</li>
+        </ul>
+      </div>
+      <div class="card lt">
+        <div class="slbl">Customer Gains</div>
+        <ul class="dl gn" style="margin-top:4px;">
+          <li>Recognition as an ethical consumer</li>
+          <li>Quality premium products that last longer</li>
+          <li>Transparent proof via third-party certifications</li>
+          <li>Circular take-back removes end-of-life guilt</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="slbl">EcoThread's Value Offers</div>
+      <div class="card" style="margin-bottom:6px;">
+        <div class="slbl">Pain Relievers</div>
+        <ul class="dl gn" style="margin-top:4px;">
+          <li>GOTS + Fair Trade + OEKO-TEX = verified, not just claimed</li>
+          <li>Transparent supply chain map on website</li>
+          <li>Take-back programme with circular outcome proof</li>
+          <li>2× national awards as third-party validation</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-bottom:6px;">
+        <div class="slbl">Gain Creators</div>
+        <ul class="dl gn" style="margin-top:4px;">
+          <li>Design-led aesthetic — sustainable &amp; beautiful</li>
+          <li>B-Corp certification (pending) — community membership</li>
+          <li>Carbon-neutral delivery from Day 1</li>
+          <li>Each purchase funds 1 tree planted (AU programme)</li>
+        </ul>
+      </div>
+      <div class="hl am">
+        <h4>Core Positioning Statement</h4>
+        <p><em>"For conscious AU consumers who refuse to choose between style and ethics — EcoThread is the premium sustainable apparel brand that proves beautiful clothing and verified environmental responsibility are not a trade-off."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl">Marketing Channel Strategy &amp; Investment</div>
+  <table>
+    <thead>
+      <tr><th>Channel</th><th>Phase 1 Budget</th><th>Expected CAC</th><th>Expected ROAS</th><th>Priority</th><th>Rationale</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Micro-influencer programme (IG/TikTok)</td><td>AUD 28K</td><td>AUD 22</td><td>4.2×</td><td><span class="b bl">P1</span></td><td>Highest trust channel for sustainability purchase</td></tr>
+      <tr><td>SEO + Content marketing</td><td>AUD 18K</td><td>AUD 31</td><td>3.8×</td><td><span class="b bl">P1</span></td><td>Compounding ROI; low CAC at scale</td></tr>
+      <tr><td>Paid social (Meta/Instagram)</td><td>AUD 32K</td><td>AUD 44</td><td>2.9×</td><td><span class="b bm">P2</span></td><td>Scalable once creative is validated</td></tr>
+      <tr><td>PR &amp; earned media (AU Fashion Week)</td><td>AUD 14K</td><td>AUD 8</td><td>Est. 6×</td><td><span class="b bl">P1</span></td><td>AU fashion media = credibility signal</td></tr>
+      <tr><td>Email / CRM programme</td><td>AUD 6K</td><td>AUD 3</td><td>7.1×</td><td><span class="b bl">P1</span></td><td>Retention and LTV; best ROI channel</td></tr>
+      <tr><td>Google Search (brand + intent)</td><td>AUD 12K</td><td>AUD 38</td><td>3.1×</td><td><span class="b bm">P2</span></td><td>Capture existing demand; brand protection</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 10 — FINANCIAL MODEL OVERVIEW
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Financial Model</div>
+      <div class="ph-title">Revenue Projections &amp; Financial KPIs</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 10 of 14</div>
+    </div>
+  </div>
+
+  <div class="kpi5" style="margin-bottom:5mm;">
+    <div class="ktile kr"><div class="kl">Monthly Burn (Y1)</div><div class="kv">AUD 28K</div><div class="ks">Avg. Phase 1 monthly</div></div>
+    <div class="ktile ka"><div class="kl">Runway</div><div class="kv">8.9 mo</div><div class="ks">From current funding</div></div>
+    <div class="ktile"><div class="kl">Rev at Breakeven</div><div class="kv">AUD 220K</div><div class="ks">Month 14 milestone</div></div>
+    <div class="ktile kr"><div class="kl">Net Cash — Year 1</div><div class="kv">−AUD 180K</div><div class="ks">Expected loss Y1</div></div>
+    <div class="ktile kg"><div class="kl">Gross Margin Target</div><div class="kv">58–62%</div><div class="ks">Phase 1 DTC blended</div></div>
+  </div>
+
+  <div class="slbl">Quarterly Revenue Ramp — 36 Month Projection (AUD '000)</div>
+  <table style="margin-bottom:4mm;">
+    <thead>
+      <tr><th>Period</th><th>Revenue</th><th>COGS</th><th>Gross Profit</th><th>Margin</th><th>Mktg Spend</th><th>EBITDA</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Q1 2026 (M1–3)</td><td>AUD 22K</td><td>AUD 9.9K</td><td>AUD 12.1K</td><td>55%</td><td>AUD 28K</td><td>−AUD 42K</td><td><span class="b bh">Pre-revenue</span></td></tr>
+      <tr><td>Q2 2026 (M4–6)</td><td>AUD 38K</td><td>AUD 16.7K</td><td>AUD 21.3K</td><td>56%</td><td>AUD 32K</td><td>−AUD 31K</td><td><span class="b bh">Building</span></td></tr>
+      <tr><td>Q3 2026 (M7–9)</td><td>AUD 56K</td><td>AUD 24K</td><td>AUD 32K</td><td>57%</td><td>AUD 30K</td><td>−AUD 18K</td><td><span class="b bm">Growing</span></td></tr>
+      <tr><td>Q4 2026 (M10–12)</td><td>AUD 64K</td><td>AUD 27K</td><td>AUD 37K</td><td>58%</td><td>AUD 28K</td><td>−AUD 12K</td><td><span class="b bm">Nearing BEP</span></td></tr>
+      <tr style="background:#fef9ee;"><td><strong>Year 1 Total</strong></td><td><strong>AUD 180K</strong></td><td><strong>AUD 78K</strong></td><td><strong>AUD 102K</strong></td><td><strong>56.7%</strong></td><td><strong>AUD 118K</strong></td><td><strong>−AUD 180K</strong></td><td><span class="b bm">On track</span></td></tr>
+      <tr><td>Q1 2027 (M13–15)</td><td>AUD 82K</td><td>AUD 34K</td><td>AUD 48K</td><td>59%</td><td>AUD 26K</td><td>+AUD 4K</td><td><span class="b bl">Breakeven ✓</span></td></tr>
+      <tr><td>Q2 2027 (M16–18) — Distrib.</td><td>AUD 148K</td><td>AUD 63K</td><td>AUD 85K</td><td>57%</td><td>AUD 38K</td><td>+AUD 22K</td><td><span class="b bl">Growth</span></td></tr>
+      <tr><td>Q3 2027 (M19–21)</td><td>AUD 156K</td><td>AUD 65K</td><td>AUD 91K</td><td>58%</td><td>AUD 35K</td><td>+AUD 28K</td><td><span class="b bl">Growth</span></td></tr>
+      <tr><td>Q4 2027 (M22–24)</td><td>AUD 154K</td><td>AUD 64K</td><td>AUD 90K</td><td>58%</td><td>AUD 32K</td><td>+AUD 28K</td><td><span class="b bl">Growth</span></td></tr>
+      <tr style="background:var(--green-light);"><td><strong>Year 2 Total</strong></td><td><strong>AUD 540K</strong></td><td><strong>AUD 226K</strong></td><td><strong>AUD 314K</strong></td><td><strong>58.1%</strong></td><td><strong>AUD 131K</strong></td><td><strong>+AUD 82K</strong></td><td><span class="b bl">Profitable</span></td></tr>
+      <tr><td>Year 3 (M25–36)</td><td>AUD 1.26M</td><td>AUD 504K</td><td>AUD 756K</td><td>60%</td><td>AUD 210K</td><td>+AUD 340K</td><td><span class="b bl">Scaled</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="hl am">
+    <p>📌 <strong>Breakeven annotation:</strong> Cash flow crosses zero at <strong>Month 14</strong> under base-case assumptions. The Year 2 revenue jump (Q2 2027) is driven by distributor channel activation in M7 of Phase 2. The margin dip in M7–10 reflects wholesale pricing structure; DTC margin recovers to 62% by Year 3.</p>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 11 — 3-YEAR FINANCIAL MODEL
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Financial Model</div>
+      <div class="ph-title">3-Year P&amp;L Scenarios &amp; Cost Structure</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 11 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl">3-Year Scenario Analysis (AUD)</div>
+  <table style="margin-bottom:5mm;">
+    <thead>
+      <tr><th></th><th colspan="3" style="text-align:center;border-left:1px solid rgba(255,255,255,.2);">Year 1 (2026)</th><th colspan="3" style="text-align:center;border-left:1px solid rgba(255,255,255,.2);">Year 2 (2027)</th><th colspan="3" style="text-align:center;border-left:1px solid rgba(255,255,255,.2);">Year 3 (2028)</th></tr>
+      <tr><th>Metric</th><th>Bear</th><th>Base</th><th>Bull</th><th>Bear</th><th>Base</th><th>Bull</th><th>Bear</th><th>Base</th><th>Bull</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Revenue</strong></td><td>AUD 110K</td><td>AUD 180K</td><td>AUD 260K</td><td>AUD 320K</td><td>AUD 540K</td><td>AUD 720K</td><td>AUD 720K</td><td>AUD 1.26M</td><td>AUD 1.9M</td></tr>
+      <tr><td>Gross Profit</td><td>AUD 59K</td><td>AUD 102K</td><td>AUD 150K</td><td>AUD 176K</td><td>AUD 314K</td><td>AUD 432K</td><td>AUD 432K</td><td>AUD 756K</td><td>AUD 1.16M</td></tr>
+      <tr><td>Gross Margin</td><td>54%</td><td>57%</td><td>58%</td><td>55%</td><td>58%</td><td>60%</td><td>60%</td><td>60%</td><td>61%</td></tr>
+      <tr><td>Marketing Spend</td><td>AUD 110K</td><td>AUD 118K</td><td>AUD 130K</td><td>AUD 120K</td><td>AUD 131K</td><td>AUD 160K</td><td>AUD 175K</td><td>AUD 210K</td><td>AUD 280K</td></tr>
+      <tr><td>Ops &amp; Overheads</td><td>AUD 72K</td><td>AUD 72K</td><td>AUD 78K</td><td>AUD 82K</td><td>AUD 92K</td><td>AUD 100K</td><td>AUD 100K</td><td>AUD 125K</td><td>AUD 160K</td></tr>
+      <tr><td><strong>EBITDA</strong></td><td style="color:var(--red);font-weight:700;">−AUD 227K</td><td style="color:var(--red);font-weight:700;">−AUD 180K</td><td style="color:var(--amber);font-weight:700;">−AUD 120K</td><td style="color:var(--red);font-weight:700;">−AUD 74K</td><td style="color:var(--green);font-weight:700;">+AUD 82K</td><td style="color:var(--green);font-weight:700;">+AUD 160K</td><td style="color:var(--green);font-weight:700;">+AUD 157K</td><td style="color:var(--green);font-weight:700;">+AUD 340K</td><td style="color:var(--green);font-weight:700;">+AUD 680K</td></tr>
+      <tr><td>Breakeven (month)</td><td>Not achieved</td><td>M14</td><td>M11</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+      <tr><td>ROI on AUD 420K</td><td>−54%</td><td>−43%</td><td>−29%</td><td>—</td><td>+20%</td><td>+38%</td><td>—</td><td>+340%</td><td>+619%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="c2" style="margin-bottom:5mm;">
+    <div>
+      <div class="slbl">Cost Structure Breakdown — Year 1</div>
+      <table style="font-size:10px;">
+        <thead><tr><th>Cost Category</th><th>Amount</th><th>% of Revenue</th></tr></thead>
+        <tbody>
+          <tr><td>Cost of Goods Sold (COGS)</td><td>AUD 78K</td><td>43%</td></tr>
+          <tr><td>Marketing &amp; Acquisition</td><td>AUD 118K</td><td>66%</td></tr>
+          <tr><td>Logistics &amp; Fulfilment</td><td>AUD 28K</td><td>16%</td></tr>
+          <tr><td>Compliance &amp; Legal</td><td>AUD 18K</td><td>10%</td></tr>
+          <tr><td>Technology &amp; Platform</td><td>AUD 12K</td><td>7%</td></tr>
+          <tr><td>Overheads &amp; Admin</td><td>AUD 14K</td><td>8%</td></tr>
+          <tr style="background:var(--navy-light);font-weight:700;"><td>Total Cost Base</td><td>AUD 268K</td><td>149%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="slbl">Key Financial Assumptions</div>
+      <ul class="dl" style="margin-top:2px;">
+        <li>DTC average order value AUD 147; wholesale AUD 89</li>
+        <li>DTC channel mix: 100% Year 1 → 60/40 DTC/wholesale Year 2</li>
+        <li>CAC reduces from AUD 44 (Y1) to AUD 31 (Y3) as brand builds</li>
+        <li>Monthly burn rate AUD 28K in Year 1 (no salary draw from AU ops)</li>
+        <li>FX rate assumption AUD/USD 0.64 throughout; hedged from M3</li>
+        <li>Distributor margin: 35% off RRP (wholesale price AUD 89)</li>
+        <li>Revenue jump M7 Phase 2: distributor channel activation +60%</li>
+        <li>Margin dip M7–10: wholesale pricing offsets DTC margin</li>
+        <li>Phase 3: B2B/corporate channel adds AUD 180K incremental</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hl nv">
+    <h4>Year 2 Revenue Jump — What's Driving It</h4>
+    <p>The 200% revenue increase from Year 1 to Year 2 is driven primarily by distributor channel activation in M7 (of Phase 2), which adds wholesale volume on top of a growing DTC base. The margin dip in M7–M10 reflects wholesale pricing structure (35% off RRP), recovering as DTC volume grows and brand awareness drives organic CAC reduction. Year 3 reflects full catalogue + corporate channel contribution.</p>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 12 — RISK REGISTER
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Risk Management</div>
+      <div class="ph-title">Risk Register &amp; Mitigation Strategy</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 12 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl">Risk Register — Top 12 Risks</div>
+  <table style="margin-bottom:5mm;">
+    <thead>
+      <tr><th>#</th><th>Risk</th><th>Category</th><th>Likelihood</th><th>Impact</th><th>Rating</th><th>Primary Mitigation</th><th>Owner</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>R1</td><td>ACCC greenwashing investigation</td><td>Legal</td><td><span class="b bh">High</span></td><td><span class="b bh">High</span></td><td><span class="b bh">Critical</span></td><td>Legal review of all claims pre-launch; lead with certifications</td><td>CEO + Legal</td></tr>
+      <tr><td>R2</td><td>Distributor partnership delays</td><td>Operations</td><td><span class="b bm">Medium</span></td><td><span class="b bh">High</span></td><td><span class="b bh">High</span></td><td>Begin distributor outreach Month 6; have 3 pipeline partners</td><td>BD Lead</td></tr>
+      <tr><td>R3</td><td>AUD/USD currency depreciation</td><td>Financial</td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td>Forward FX contracts from Month 3; price in AUD from Day 1</td><td>CFO</td></tr>
+      <tr><td>R4</td><td>Phase 1 revenue gate not met</td><td>Financial</td><td><span class="b bm">Medium</span></td><td><span class="b bh">High</span></td><td><span class="b bh">High</span></td><td>Monthly marketing pivot reviews; CAC monitoring weekly</td><td>CMO</td></tr>
+      <tr><td>R5</td><td>3PL setup delays (AU fulfilment)</td><td>Operations</td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td>3PL contract signed before any marketing spend</td><td>Ops Lead</td></tr>
+      <tr><td>R6</td><td>Kids certification timeline overrun</td><td>Compliance</td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td>Initiate AS/NZS cert process Month 2; not blocking Phase 1</td><td>Ops Lead</td></tr>
+      <tr><td>R7</td><td>Price war from mid-market incumbents</td><td>Market</td><td><span class="b bl">Low</span></td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td>Premium positioning with proof; avoid mid-market messaging</td><td>CMO</td></tr>
+      <tr><td>R8</td><td>Supply chain disruption (logistics)</td><td>Operations</td><td><span class="b bl">Low</span></td><td><span class="b bh">High</span></td><td><span class="b bm">Medium</span></td><td>Dual supplier across India/Portugal; 60-day AU safety stock</td><td>Supply Chain</td></tr>
+      <tr><td>R9</td><td>Influencer brand misalignment</td><td>Marketing</td><td><span class="b bl">Low</span></td><td><span class="b bm">Medium</span></td><td><span class="b bl">Low</span></td><td>Thorough influencer screening; values-aligned criteria</td><td>CMO</td></tr>
+      <tr><td>R10</td><td>Consumer privacy regulation tightening</td><td>Legal</td><td><span class="b bm">Medium</span></td><td><span class="b bl">Low</span></td><td><span class="b bl">Low</span></td><td>Privacy Act reform compliance review; first-party data strategy</td><td>Legal</td></tr>
+      <tr><td>R11</td><td>Platform dependency (Meta/Instagram)</td><td>Marketing</td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td><span class="b bm">Medium</span></td><td>Diversify channels; invest in owned (email, SEO) from Month 1</td><td>CMO</td></tr>
+      <tr><td>R12</td><td>B-Corp certification delay</td><td>Brand</td><td><span class="b bl">Low</span></td><td><span class="b bl">Low</span></td><td><span class="b bl">Low</span></td><td>GOTS + Fair Trade sufficient for launch; B-Corp is aspirational</td><td>CEO</td></tr>
+    </tbody>
+  </table>
+
+  <div class="c3">
+    <div class="hl rd">
+      <h4>If High Risks Remain Unresolved</h4>
+      <ul class="dl rd" style="margin-top:4px;">
+        <li>ACCC enforcement → delay Phase 2 by 2–3 months minimum</li>
+        <li>Currency unhedged → increase CAC by est. 18% (AUD weakens)</li>
+        <li>Price war intensifies → compress EBITDA margin by 12%</li>
+      </ul>
+    </div>
+    <div class="hl gn">
+      <h4>If All Risks Mitigated — Upside</h4>
+      <ul class="dl gn" style="margin-top:4px;">
+        <li>Breakeven at Month 12 (vs Month 14 base)</li>
+        <li>Gross margin 66% (DTC dominant mix)</li>
+        <li>ROI 340% by Year 3 on AUD 420K investment</li>
+        <li>Risk score drops to 3/10</li>
+      </ul>
+    </div>
+    <div class="hl am">
+      <h4>Risk Monitoring Cadence</h4>
+      <ul class="dl am" style="margin-top:4px;">
+        <li>R1–R2: Weekly review by CEO</li>
+        <li>R3 (FX): Monthly CFO review vs forward contracts</li>
+        <li>R4 (Revenue gate): Bi-weekly pipeline review</li>
+        <li>All risks: Monthly board report from Month 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 13 — EXECUTION ROADMAP
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Execution Roadmap</div>
+      <div class="ph-title">36-Month Execution Plan &amp; Milestones</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 13 of 14</div>
+    </div>
+  </div>
+
+  <div class="slbl" style="margin-bottom:4px;">Phase Overview</div>
+  <div class="ph-grid" style="margin-bottom:5mm;">
+    <div class="phc phase-p1">
+      <div class="phc-hd p1">Phase 1 — Establish (M1–12)</div>
+      <div class="phc-bd">
+        <div class="phc-timeline">Apr 2026 – Mar 2027 · Budget: AUD 180K</div>
+        <ul>
+          <li>ABN registration + GST enrolment (M1)</li>
+          <li>ACCC legal review of all marketing materials (M1–2)</li>
+          <li>Kids cert (AS/NZS) process initiated (M2)</li>
+          <li>AU 3PL partner contracted and operational (M2)</li>
+          <li>Shopify AU storefront live + Afterpay/Zip (M3)</li>
+          <li>Influencer programme — 20 micro-influencers (M3)</li>
+          <li>PR programme — AU Fashion Week pitch (M4)</li>
+          <li>First wholesale conversations initiated (M6)</li>
+          <li>Revenue gate review: AUD 150K+ (M12)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phc">
+      <div class="phc-hd p2">Phase 2 — Grow (M13–24)</div>
+      <div class="phc-bd">
+        <div class="phc-timeline">Apr 2027 – Mar 2028 · Budget: AUD 160K</div>
+        <ul>
+          <li>Breakeven achieved (M14)</li>
+          <li>Distributor channel activation — wholesale launch (M7 of phase)</li>
+          <li>3–5 boutique retail partnerships signed</li>
+          <li>Kids certification completed (M8 of phase)</li>
+          <li>B-Corp application submitted</li>
+          <li>Paid social scaled (Meta/IG) with proven creative</li>
+          <li>Marketing spend: AUD 131K</li>
+          <li>Revenue gate review: AUD 450K+ (M24)</li>
+          <li>Decision: invest in owned retail pop-up?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phc">
+      <div class="phc-hd p3">Phase 3 — Scale (M25–36)</div>
+      <div class="phc-bd">
+        <div class="phc-timeline">Apr 2028 – Mar 2029 · Budget: AUD 80K</div>
+        <ul>
+          <li>Full product catalogue including kids range</li>
+          <li>Corporate B2B / gifting channel launch</li>
+          <li>B-Corp certification active — use in marketing</li>
+          <li>Potential owned retail pop-up (Sydney/Melb)</li>
+          <li>Trans-Tasman market strategy review (NZ → AU)</li>
+          <li>Target: 1.5% SAM share · AUD 1.26M revenue</li>
+          <li>EBITDA positive · ROI ≥ 200%</li>
+          <li>Decision: Series A fundraise for expansion?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl">Quarterly Milestone Summary</div>
+  <table style="margin-bottom:4mm;">
+    <thead>
+      <tr><th>Quarter</th><th>Key Milestone</th><th>Revenue Target</th><th>Owner</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Q1 2026</td><td>Legal setup, 3PL contracted, storefront live</td><td>AUD 22K</td><td>CEO, Ops</td><td><span class="b bn">Planned</span></td></tr>
+      <tr><td>Q2 2026</td><td>Influencer launch, ACCC clearance, PR programme</td><td>AUD 38K</td><td>CMO</td><td><span class="b bn">Planned</span></td></tr>
+      <tr><td>Q3 2026</td><td>Revenue growth, distributor pipeline opened, FX hedging</td><td>AUD 56K</td><td>BD, CFO</td><td><span class="b bn">Planned</span></td></tr>
+      <tr><td>Q4 2026</td><td>Phase 1 revenue gate — AUD 150K+ cumulative</td><td>AUD 64K</td><td>CEO</td><td><span class="b bn">Gate</span></td></tr>
+      <tr><td>Q1 2027</td><td>Breakeven milestone achieved (M14)</td><td>AUD 82K</td><td>CFO</td><td><span class="b bn">Planned</span></td></tr>
+      <tr><td>Q2–Q3 2027</td><td>Distributor channel live; wholesale revenue begins</td><td>AUD 148K</td><td>BD</td><td><span class="b bn">Planned</span></td></tr>
+      <tr><td>Q4 2027</td><td>Phase 2 revenue gate — AUD 450K+ cumulative Y2</td><td>AUD 154K</td><td>CEO</td><td><span class="b bn">Gate</span></td></tr>
+      <tr><td>2028 (Y3)</td><td>Full catalogue, B-Corp active, EBITDA positive</td><td>AUD 1.26M</td><td>CEO</td><td><span class="b bn">Planned</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="c2">
+    <div>
+      <div class="slbl">Critical Dependencies</div>
+      <ul class="dl" style="font-size:10px;">
+        <li><strong>ABN → GST</strong>: ABN required before GST enrolment — block on revenue recognition</li>
+        <li><strong>3PL → First sale</strong>: Fulfilment operational before any marketing spend activated</li>
+        <li><strong>Legal clearance → Marketing launch</strong>: ACCC review must complete first</li>
+        <li><strong>Distributor outreach M6 → Phase 2 activation M13</strong>: 6-month lead time minimum</li>
+        <li><strong>Kids cert M2 → Full catalogue Phase 3</strong>: 12–14 month certification process</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slbl">Decision Gates</div>
+      <div class="hl nv" style="margin-bottom:5px;">
+        <h4>Month 6 Gate</h4>
+        <p>Pass: Rev ≥ AUD 80K · CAC ≤ AUD 45 · NPS ≥ 50 → Continue Phase 1 as planned.<br/>Fail: Rev &lt; AUD 55K → Pause paid social; double down on influencer + PR; extend timeline 2 months.</p>
+      </div>
+      <div class="hl nv">
+        <h4>Month 18 Gate (Phase 2 Review)</h4>
+        <p>Pass: Rev ≥ AUD 320K · Margin ≥ 54% · 1+ distributor active → Proceed to Phase 3 on schedule.<br/>Fail: → Delay Phase 3 by 6 months; focus on wholesale conversion; reassess Series A timing.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 14 — APPENDIX / BACK COVER
+     ═══════════════════════════════════════════ -->
+<div class="page">
+<div class="pi">
+  <div class="ph">
+    <div>
+      <div class="ph-eyebrow">Appendix</div>
+      <div class="ph-title">Sources, Methodology &amp; Disclaimers</div>
+    </div>
+    <div class="ph-meta">
+      <div class="ph-company">EcoThread Apparel · Australia</div>
+      <div class="ph-pg">Page 14 of 14</div>
+    </div>
+  </div>
+
+  <div class="c2" style="margin-bottom:6mm;">
+    <div>
+      <div class="slbl">Data Sources &amp; References</div>
+      <ul class="dl" style="margin-top:4px;font-size:10px;">
+        <li>Austrade — Market Entry Guide: Australia 2025/26</li>
+        <li>Australian Bureau of Statistics — Retail Trade, Apparel Category (Dec 2025)</li>
+        <li>ACCC — Greenwashing Guidance for Business (2024)</li>
+        <li>IBISWorld — Sustainable Apparel Market Report AU (2026)</li>
+        <li>GlobalData — Premium Fashion Market Outlook APAC (2025)</li>
+        <li>McKinsey &amp; Company — State of Fashion Report 2026</li>
+        <li>Ethical Consumer Index Australia — Consumer Attitudes Survey (2025)</li>
+        <li>GOTS — Global Organic Textile Standard Certification Guidelines v7</li>
+        <li>Standards Australia — AS/NZS Product Safety Standards (2024 update)</li>
+        <li>RBA — Exchange Rate Forecasts AUD/USD (Q1 2026)</li>
+        <li>Shopify — AU E-commerce Benchmark Report (2025)</li>
+        <li>Afterpay — BNPL Market Penetration in Australian Fashion (2025)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="slbl">Methodology</div>
+      <p style="font-size:10.5px;margin-bottom:8px;">This Market Entry Plan was generated using the PartnerWise AI-assisted research methodology, combining:</p>
+      <ul class="dl" style="font-size:10px;">
+        <li>Uppsala model internationalisation framework (Johanson &amp; Vahlne)</li>
+        <li>Porter's Five Forces competitive analysis</li>
+        <li>PESTLE environmental scanning with weighted impact scoring</li>
+        <li>Value Proposition Canvas (Osterwalder &amp; Pigneur)</li>
+        <li>Business Model Canvas framework</li>
+        <li>Risk register weighted by likelihood × impact (5×5 matrix)</li>
+        <li>Three-scenario financial modelling (Bear / Base / Bull)</li>
+        <li>Primary research inputs: EcoThread company data, market surveys</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slbl" style="margin-bottom:4px;">Ownership Matrix — Who Executes What</div>
+  <table style="margin-bottom:6mm;">
+    <thead><tr><th>Workstream</th><th>Owner</th><th>Key Actions</th><th>Timeline</th></tr></thead>
+    <tbody>
+      <tr><td>Legal &amp; Compliance</td><td>CEO + AU Legal Counsel</td><td>ACCC review, GST registration, kids cert, Modern Slavery audit</td><td>M1–M3</td></tr>
+      <tr><td>Operations Setup</td><td>Ops Lead</td><td>3PL selection, warehouse setup, inventory planning, supply chain</td><td>M1–M2</td></tr>
+      <tr><td>Digital Launch</td><td>CMO + Tech Lead</td><td>Shopify AU, BNPL integration, analytics, CRM setup</td><td>M2–M3</td></tr>
+      <tr><td>Marketing &amp; Brand</td><td>CMO</td><td>Influencer programme, PR, paid social, AU content localisation</td><td>M3 onwards</td></tr>
+      <tr><td>Business Development</td><td>BD Lead</td><td>Distributor outreach, boutique retail partnerships</td><td>M6 onwards</td></tr>
+      <tr><td>Finance</td><td>CFO</td><td>FX hedging, monthly reporting, revenue gate monitoring</td><td>M1 onwards</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hl am" style="margin-bottom:6mm;">
+    <h4>⚠️ Important Disclaimer</h4>
+    <p>This Market Entry Plan is prepared for strategic planning purposes only. All financial projections are estimates based on available data and stated assumptions — actual results may differ materially. PartnerWise and its affiliates accept no liability for business decisions made in reliance on this report. Users should conduct independent due diligence before committing capital. Market conditions, regulatory requirements, and competitive dynamics are subject to change.</p>
+  </div>
+
+  <!-- Back page branding strip -->
+  <div style="background:var(--navy);border-radius:11px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:36px;height:36px;background:var(--amber);border-radius:9px;display:flex;align-items:center;justify-content:center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#11205D"><path d="M12 2L2 19h20L12 2z"/></svg>
+      </div>
+      <div>
+        <div style="color:#fff;font-size:15px;font-weight:800;">PartnerWise</div>
+        <div style="color:rgba(255,255,255,.5);font-size:10px;">AI-Powered Market Entry Intelligence</div>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div style="color:rgba(255,255,255,.5);font-size:10px;">nebil@ultraproventures.com</div>
+      <div style="color:rgba(255,255,255,.5);font-size:10px;margin-top:2px;">Generated: April 15, 2026 · EcoThread Apparel · Australia</div>
+    </div>
+  </div>
+
+  <div class="pf">
+    <p>PartnerWise · Market Entry Plan · EcoThread Apparel · Australia 2026</p>
+    <p>Confidential — Not for External Distribution</p>
+  </div>
+</div>
+</div>
+
+</div><!-- end #report -->
+
+<script>
+function downloadPDF() {
+  const btn = document.querySelector('.btn-dl');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg> Generating PDF...';
+  btn.disabled = true;
+
+  const opt = {
+    margin: 0,
+    filename: 'EcoThread_Market_Entry_Plan_Australia_2026.pdf',
+    image: { type: 'jpeg', quality: 0.97 },
+    html2canvas: { scale: 2, useCORS: true, logging: false },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['css', 'legacy'], before: '.page' }
+  };
+
+  html2pdf()
+    .set(opt)
+    .from(document.getElementById('report'))
+    .save()
+    .then(() => {
+      btn.innerHTML = orig;
+      btn.disabled = false;
+    });
+}
+</script>
+</body>
+</html>
